@@ -60,6 +60,8 @@
                         </div>
                     </div>
 
+                    
+
                     <!-- Trending Section -->
                     <div class="col-lg-4">
 
@@ -110,6 +112,8 @@
 
         </div> <!-- End .row -->
     </div>
+
+    
 </section> <!-- End Post Grid Section -->
 
 <!-- ======= Culture Category Section ======= -->

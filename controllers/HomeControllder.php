@@ -1,13 +1,41 @@
-<!-- <?php 
+<?php
 
-// function homeIndex(){
-//     $view = 'home';
-//     $postTopView = postTopViewOnHome();
-//     $postTop6Latest = postTop6LatestOnHome();
-//     $postTop5Trending = postTop5TrendingOnHome();
-//     require_once PATH_VIEW . 'layouts/master.php';
-    
-// }
+function homeIndex()
+{
+    $view = 'home';
+    //     $postTopView = postTopViewOnHome();
+    //     $postTop6Latest = postTop6LatestOnHome();
+    //     $postTop5Trending = postTop5TrendingOnHome();
+    require_once PATH_VIEW . 'layouts/master.php';
+} 
+
+function aboutIndex() {
+    $view = 'about';
+    require_once PATH_VIEW . 'layouts/master.php';
+    require_once './views/about.php';
+}
+
+function contactIndex() {
+    $view = 'contact';
+    require_once PATH_VIEW . 'layouts/master.php';
+    require_once './views/contact.php';
+}
+
+function handleContactForm() {
+    $name = $_POST['name'];
+    $email = $_POST['email'];
+    $message = $_POST['message'];
+
+    if (saveContact($name, $email, $message)) {
+        $success = "Cảm ơn bạn đã liên hệ!";
+    } else {
+        $error = "Có lỗi xảy ra. Vui lòng thử lại.";
+    }
+    require_once './../views/layouts/master.php';
+}
+
+
+
 
 // Luong mvc 1: vao index
 //     -> duoc dieu huong den ham xu ly logic trong controller tuong ung
