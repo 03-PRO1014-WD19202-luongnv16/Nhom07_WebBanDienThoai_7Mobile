@@ -7,8 +7,9 @@
 define('PATH_CONTROLLER', __DIR__ . '/../controllers/');
 define('PATH_MODEL', __DIR__ . '/../models/');
 define('PATH_VIEW', __DIR__ . '/../views/');
-define('BASE_URL', 'http://localhost/Nhom07_WebBanDienThoai_7Mobile/');
-// }
+
+define('BASE_URL', 'http://nhom07_webbandienthoai_7mobile.test/');
+
 
 // ADMIN {
 

@@ -18,6 +18,15 @@ $act = $_GET['act'] ?? '/';
 
 match ($act) {
     '/' => homeIndex(),
+
+    '/products' => productIndex(),
+    '/contact' => contactIndex(),
+    'handleContactForm' => handleContactForm(),
+    '/about' => aboutIndex(),
+    '/product'=> productDetail($_GET['id']),
+   
+
+
 };
 //...
 
