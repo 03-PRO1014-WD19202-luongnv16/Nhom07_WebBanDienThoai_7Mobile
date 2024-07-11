@@ -1,5 +1,6 @@
 <?php
 
+
 function homeIndex()
 {
     $view = 'home';
@@ -33,6 +34,7 @@ function handleContactForm() {
     }
     require_once './../views/layouts/master.php';
 }
+
 
 
 

@@ -5,7 +5,10 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
+
     <title>7Mobile</title>
+
+
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -21,6 +24,7 @@
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/contacts/contact-1/assets/css/contact-1.css">
+
     <link href="<?= BASE_URL ?>assets/client/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= BASE_URL ?>assets/client/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="<?= BASE_URL ?>assets/client/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
@@ -31,7 +35,9 @@
     <link href="<?= BASE_URL ?>assets/client/assets/css/variables.css" rel="stylesheet">
     <link href="<?= BASE_URL ?>assets/client/assets/css/main.css" rel="stylesheet">
 
+
     
+
 
     <!-- =======================================================
   * Template Name: ZenBlog
@@ -62,6 +68,7 @@
 
     <!-- Vendor JS Files -->
   
+
     <script src="<?= BASE_URL ?>assets/client/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= BASE_URL ?>assets/client/assets/vendor/swiper/swiper-bundle.min.js"></script>
     <script src="<?= BASE_URL ?>assets/client/assets/vendor/glightbox/js/glightbox.min.js"></script>
