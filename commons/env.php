@@ -19,7 +19,7 @@ define('PATH_VIEW_ADMIN', __DIR__ . '/../admin/views/');
 
 define('PATH_UPLOAD', __DIR__ . '/../');
 
-define('BASE_URL_ADMIN', 'http://localhost/Nhom07_WebBanDienThoai_7Mobile/admin/');
+define('BASE_URL_ADMIN', 'http://nhom07_webbandienthoai_7mobile.test/admin/');
 // }
 
 define('DB_HOST', 'localhost');

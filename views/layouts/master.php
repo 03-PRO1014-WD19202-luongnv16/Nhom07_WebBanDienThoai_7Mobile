@@ -19,11 +19,14 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Inter:wght@400;500&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
 
     <!-- Vendor CSS Files -->
     <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/contacts/contact-1/assets/css/contact-1.css">
+    <link rel="stylesheet"
+        href="https://unpkg.com/bs-brain@2.0.4/components/contacts/contact-1/assets/css/contact-1.css">
 
     <link href="<?= BASE_URL ?>assets/client/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="<?= BASE_URL ?>assets/client/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
@@ -36,7 +39,7 @@
     <link href="<?= BASE_URL ?>assets/client/assets/css/main.css" rel="stylesheet">
 
 
-    
+
 
 
     <!-- =======================================================
@@ -54,6 +57,10 @@
     <?php require_once PATH_VIEW . "layouts/partials/header.php"; ?>
     <!-- End Header -->
 
+    <!-- top4 -->
+    <main id="main">
+    </main>
+
     <main id="main">
         <?php require_once PATH_VIEW . $view . ".php"; ?>
     </main>
@@ -64,10 +71,11 @@
 
     <!-- End Footer -->
 
-    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+    <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i
+            class="bi bi-arrow-up-short"></i></a>
 
     <!-- Vendor JS Files -->
-  
+
 
     <script src="<?= BASE_URL ?>assets/client/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="<?= BASE_URL ?>assets/client/assets/vendor/swiper/swiper-bundle.min.js"></script>
