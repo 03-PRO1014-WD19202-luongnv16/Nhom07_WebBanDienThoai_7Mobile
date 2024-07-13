@@ -60,7 +60,7 @@
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=categories">List</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=category-create">Add new</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=category-add">Add new</a>
             </div>
         </div>
     </li>
@@ -96,7 +96,7 @@
         <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=products">List</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=product-create">Add new</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=product-add">Add new</a>
             </div>
         </div>
     </li>

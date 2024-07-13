@@ -66,16 +66,15 @@ if(!function_exists('getUserAdminByEmailAndPassword')){
     }
 }
 
-function getAlluser()
+function getAllUser()
 {
     global $conn; // Sử dụng kết nối từ connect.php
-    $sql = "
-        SELECT p.*, c.name as category_name 
-        FROM products p 
-        JOIN categories c ON p.category_id = c.category_id
-    ";
+    $sql = "SELECT * FROM users";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+
+
+
 

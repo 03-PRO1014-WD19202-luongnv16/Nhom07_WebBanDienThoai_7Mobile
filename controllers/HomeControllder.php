@@ -4,7 +4,8 @@
 function homeIndex()
 {
     $view = 'home';
-    //     $postTopView = postTopViewOnHome();
+    $postTopViews = postTopViewOnHome();
+    $postTopSales = getTop3BiggestDiscountProducts();
     //     $postTop6Latest = postTop6LatestOnHome();
     //     $postTop5Trending = postTop5TrendingOnHome();
     require_once PATH_VIEW . 'layouts/master.php';
@@ -23,6 +24,7 @@ function contactIndex() {
 }
 
 function handleContactForm() {
+    $view = 'contact';
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
@@ -32,8 +34,12 @@ function handleContactForm() {
     } else {
         $error = "Có lỗi xảy ra. Vui lòng thử lại.";
     }
-    require_once './../views/layouts/master.php';
+    require_once PATH_VIEW . 'layouts/master.php';
+    require_once './views/contact.php';
 }
+
+
+
 
 
 

@@ -18,14 +18,27 @@ $act = $_GET['act'] ?? '/';
 
 // Kiểm tra xem user đã đăng nhập chưa
 
-// middleware_auth_check($act); 
+// middleware_auth_check($act);
 
 match ($act) {
     '/' => dashboard(),
-
     //Authen
     'login' => authenShowFormLogin(),
     'logout' => authenLogout(),
+    'categories' => categoryIndex(),
+    'products' => productIndex(),
+    'category-add' => categoryAdd(),
+    'category-create' => handleCategoryForm(),
+    'category-delete'=> categoryDelete($_GET['id']),
+    'editCategory'=> categoryEdit($_GET['id']),
+    'users'=> userIndex(),
+    'userDetail'=> showUser($_GET['id']),
+
+    'product-add'=> productAdd(),
+    'product-create'=> handleProductForm(),
+
+
+    //tất cả các chức năng cần truyền vào id đều lỗi chưa sửa được đường dẫn @@
 };
 
 require_once '../commons/disconnect.php';
