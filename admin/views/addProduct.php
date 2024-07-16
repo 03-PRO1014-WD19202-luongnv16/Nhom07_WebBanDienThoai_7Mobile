@@ -81,8 +81,8 @@
 
                         <div class="col-12">
                             <label for="fullname" class="form-label">Giá khuyến mãi <span
-                                    class="text-danger">*</span></label>
-                            <input type="number" class="form-control" id="priceSale" name="priceSale" required value="">
+                                    class="text-danger"></span></label>
+                            <input type="number" class="form-control" id="priceSale" name="priceSale"  value="">
                         </div>
 
                         <div class="col-12">

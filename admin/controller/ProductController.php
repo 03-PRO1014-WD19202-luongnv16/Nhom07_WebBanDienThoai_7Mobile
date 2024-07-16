@@ -34,7 +34,7 @@ function handleProductForm() {
     $priceSale= $_POST['priceSale'];
     $name = $_POST['name'];
 
-    if (saveProduct($name, $description, $category_id, $priceSale, $stock,$price)) {
+    if (saveProduct($name, $description, $category_id, $priceSale, $stock,$price, $image)) {
         $success = "Thêm mới thành công";
     } else {
         $error = "Có lỗi xảy ra. Vui lòng thử lại.";
