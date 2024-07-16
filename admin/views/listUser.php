@@ -210,7 +210,7 @@
                                         <!-- <p><?= htmlspecialchars($user['password']) ?></p> -->
                                         <p><?= htmlspecialchars($user['email']) ?></p>
                                         <p><?= htmlspecialchars($user['role']) ?></p>
-                                       <a href="<?= BASE_URL_ADMIN ?>act=act=editCategory&id=3"> <button class="btn btn-danger"> chi tiết</button></a>
+                                       <a href="<?= BASE_URL_ADMIN ?>?act=userDetail&id=<?= $user['user_id'] ?>"> <button class="btn btn-danger"> chi tiết</button></a>
                                        
                                     </div>
                                 </div>

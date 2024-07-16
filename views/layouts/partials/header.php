@@ -42,7 +42,7 @@
             <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
             <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
             <a href="/index.php?act=/login" class="mx-2"><span>Login</span></a>
-            <a href="#" class="mx-2"><span>Sign up</span></a>
+            <a href="/index.php?act=/signup" class="mx-2"><span>Sign up</span></a>
 
 
             <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>

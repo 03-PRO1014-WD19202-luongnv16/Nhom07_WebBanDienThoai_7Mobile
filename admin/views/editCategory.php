@@ -10,7 +10,7 @@
     <div class="container">
         <div class="row justify-content-md-center">
             <div class="col-12 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
-                <h2 class="mb-4 display-5 text-center">Chỉnh sửa danh mục</h2>
+                <h2 class="mb-4 display-5 text-center">Chỉnh sửa danh mục <?= $category['name']?> </h2>
                 <hr class="w-50 mx-auto mb-5 mb-xl-9 border-dark-subtle">
             </div>
         </div>
@@ -20,12 +20,14 @@
         <div class="row justify-content-lg-center">
             <div class="col-12 col-lg-9">
                 <div class="bg-white border rounded shadow-sm overflow-hidden"></div>
-                <form action="./index.php?act=category-create" method="POST">
+                <form action="./index.php?act=category-update" method="POST">
                     <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                         <div class="col-12">
+
+                        <input type="number" class="form-control" id="category_id" name="category_id" required value="<?= $category['category_id']?>" hidden>
                             <label for="fullname" class="form-label">name <span
                                     class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="name" name="name" required value="">
+                            <input type="text" class="form-control" id="name" name="name" required value="<?= $category['name']?>">
                         </div>
                         <!-- <div class="col-12 col-md-6">
                             <label for="email" class="form-label">Email <span class="text-danger">*</span></label>
@@ -53,12 +55,12 @@
               </div> -->
                         <div class="col-12">
                             <label for="message" class="form-label">description <span class="text-danger">*</span></label>
-                            <textarea class="form-control" id="description" name="description" rows="3" required></textarea>
+                            <textarea class="form-control" id="description" name="description" rows="3" required ></textarea>
                         </div>
                         <div class="col-12">
                             <br>
                             <div class="d-grid">
-                                <a href="/index.php?/act=category-create"><button class="btn btn-primary btn-lg" type="submit">Gửi Ngay</button></a>
+                                <a href="/index.php?/act=category-update"><button class="btn btn-primary btn-lg" type="submit">Sửa Ngay</button></a>
                             </div>
                         </div>
                     </div>
@@ -76,6 +78,5 @@
 
             </div>
         </div>
-    </div>
     </div>
 </section>

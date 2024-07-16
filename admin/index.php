@@ -28,14 +28,16 @@ match ($act) {
     'categories' => categoryIndex(),
     'products' => productIndex(),
     'category-add' => categoryAdd(),
+    // 'category-update'=> updateCategoryForm(),
     'category-create' => handleCategoryForm(),
-    'category-delete'=> categoryDelete($_GET['id']),
+    'category-delete'=> removeCategory($_GET['id']),
     'editCategory'=> categoryEdit($_GET['id']),
     'users'=> userIndex(),
     'userDetail'=> showUser($_GET['id']),
-
     'product-add'=> productAdd(),
     'product-create'=> handleProductForm(),
+    'product-delete' => removeProduct($_GET['id']),
+
 
 
     //tất cả các chức năng cần truyền vào id đều lỗi chưa sửa được đường dẫn @@
