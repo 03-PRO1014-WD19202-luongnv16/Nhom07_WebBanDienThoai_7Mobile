@@ -18,22 +18,29 @@ function saveCategory($name, $description) {
     return $stmt->execute();
 }
 
-function deleteCategory($id){
+function deleteCategory($category_id) {
     global $conn;
-    $sql = "DELETE FROM products WHERE id = :id";
+    $sql = "DELETE FROM categories WHERE category_id = :category_id";
     $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    return $stmt->execute();
- 
-}
-
-function updateCategory($id, $name, $description) {
-    global $conn;
-    $sql = "UPDATE categories SET name = :name, description = :description WHERE id = :id";
-    $stmt = $conn->prepare($sql);
-    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
-    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
-    $stmt->bindParam(':description', $description, PDO::PARAM_STR);
-
+    $stmt->bindParam(':category_id', $category_id, PDO::PARAM_INT);
     return $stmt->execute();
 }
+
+function getCategoryById($category_id) {
+    global $conn;
+    $sql = "SELECT category_id, name, description FROM categories WHERE category_id = :category_id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':category_id', $category_id, PDO::PARAM_INT);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+// function updateCategory($id, $name, $description) {
+//     global $conn;
+//     $sql = "UPDATE categories SET name = :name, description = :description WHERE category_id = :id";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->bindParam(':category_id', $id, PDO::PARAM_INT);
+//     $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+//     $stmt->bindParam(':description', $description, PDO::PARAM_STR);
+//     return $stmt->execute();
+// }

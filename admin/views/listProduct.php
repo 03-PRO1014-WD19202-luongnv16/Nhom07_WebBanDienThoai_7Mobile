@@ -192,60 +192,56 @@
                                 </div>
                         </div> -->
 
-        <div class="products">
-            <?php if (empty($products)): ?>
-                <p>Không có sản phẩm nào.</p>
-            <?php else: ?>
-                <div class="row">
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">ảnh</th>
+                    <th scope="col">tên</th>
+                    <th scope="col">giá</th>
+                    <th scope="col">giá khuyến mãi</th>
+                    <th scope="col">danh mục</th>
+                    <th scope="col">mô tả</th>
+                    <th scope="col">số lượng</th>
+                    <th scope="col">ngày tạo</th>
+                    <th>Hành động</th>
+
+
+
+
+                </tr>
+            </thead>
+            <tbody>
+                <?php if (empty($products)): ?>
+                    <p>Không có sản phẩm nào.</p>
+                <?php else: ?>
                     <?php foreach ($products as $product): ?>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div id="product-1" class="single-product">
-                                <div class="product">
+                        <tr>
+                            <td><?= htmlspecialchars($product['product_id']) ?></td>
+                            <td scope="row"> <img src="../upload/image/<?= htmlspecialchars($product['image']) ?>"
+                                    alt="<?= htmlspecialchars($product['name']) ?>" style="width:250px;height: 300px;"> </td>
+                            <td><?= htmlspecialchars($product['name']) ?></td>
 
-                                    <img src="../upload/image/<?= htmlspecialchars($product['image']) ?>"
-                                        alt="<?= htmlspecialchars($product['name']) ?>" style="width:250px;height: 300px;">
-
-
-
-                                    <div class="part-2">
-                                        <h3><?= htmlspecialchars($product['name']) ?></h3>
-
-                                        <p>
-                                            Giá:
-                                            <?php if (!empty($product['priceSale'])): ?>
-                                                <span
-                                                    style="text-decoration: line-through;"><?= htmlspecialchars($product['price']) ?>
-                                                    VND</span>
-                                                <span><?= htmlspecialchars($product['priceSale']) ?> VND</span>
-                                            <?php else: ?>
-                                                <span><?= htmlspecialchars($product['price']) ?> VND</span>
-                                            <?php endif; ?>
-                                        </p>
-                                        <p>Danh mục: <?= htmlspecialchars($product['category_name']) ?></p>
-
-                                        <p><?= htmlspecialchars($product['description']) ?></p>
-                                        <p>Còn lại: <?= htmlspecialchars($product['stock']) ?></p>
-                                        <!-- <p>Ngày tạo: <?= htmlspecialchars($product['created_at']) ?></p> -->
-                                        <div class="row" style="">
-                                            <a href="/index.php?act=/product&id=1"> <button class="btn btn-danger"> chi
-                                                    tiết</button></a>
-                                            <a href="/index.php?act=/product&id=1"> <button class="btn btn-warning"> Sửa thông
-                                                    tin </button></a>
-                                        </div>
-                                    </div>
+                            <td><?= htmlspecialchars($product['price']) ?></td>
+                            <td><?= htmlspecialchars($product['priceSale']) ?></td>
+                            <td><?= htmlspecialchars($product['category_name']) ?></td>
+                            <td><?= htmlspecialchars($product['description']) ?></td>
+                            <td><?= htmlspecialchars($product['stock']) ?></td>
+                            <td> <?= htmlspecialchars($product['created_at']) ?></td>
+                            <td>
+                                <div class="row" style="">
+                                <button class="btn btn-danger" onclick=" confirm('bạn muốn xóa sản phẩm này ?')">  
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=product-delete&id=<?= $product['product_id'] ?>">Xóa</a>
+                                </button>
+                                    <a href="#"> <button class="btn btn-warning">Sửa</button></a>
                                 </div>
-                            </div>
-                        </div>
+                            </td>
+                        </tr>
                     <?php endforeach; ?>
-                    <hr>
-                </div>
+                <?php endif; ?>
+            </tbody>
+        </table>
 
-
-
-            <?php endif; ?>
-        </div>
-
-
-    </div>
     </div>
 </section>

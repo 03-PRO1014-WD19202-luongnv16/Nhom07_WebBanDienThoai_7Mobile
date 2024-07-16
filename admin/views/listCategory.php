@@ -208,8 +208,8 @@
                                     <div class="part-2">
                                         <h3><?= htmlspecialchars($category['name']) ?></h3>
                                         <p><?= htmlspecialchars($category['description']) ?></p>
-                                       <a href="<?= BASE_URL_ADMIN ?>act=category-delete&id=<?= $category['id'] ?>"> <button class="btn btn-danger"> Xóa</button></a>
-                                       <a href="<?= BASE_URL_ADMIN ?>act=editCategory&id=<?= $category['id'] ?>"> <button class="btn btn-warning"> Sửa</button></a>
+                                        <a href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['category_id'] ?>"><button class="btn btn-danger">xóa</button></a>
+                                       <a href="<?= BASE_URL_ADMIN ?>?act=editCategory&id=<?= $category['category_id'] ?>"> <button class="btn btn-warning"> Sửa</button></a>
                                        
                                     </div>
                                 </div>
@@ -225,6 +225,5 @@
         </div>
 
 
-    </div>
     </div>
 </section>

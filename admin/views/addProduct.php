@@ -19,7 +19,7 @@
         <div class="row justify-content-lg-center">
             <div class="col-12 col-lg-9">
                 <div class="bg-white border rounded shadow-sm overflow-hidden"></div>
-                <form action="./index.php?act=product-create" method="POST">
+                <form action="./index.php?act=product-create" method="POST" enctype="multipart/form-data">
                     <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                         <div class="col-12">
                             <label for="fullname" class="form-label">Tên <span class="text-danger">*</span></label>
@@ -49,6 +49,11 @@
                   <input type="tel" class="form-control" id="phone" name="phone" value="">
                 </div>
               </div> -->
+              <div class="col-12">
+                            <label for="fullname" class="form-label">Ảnh <span class="text-danger">*</span></label>
+                            <input type="file" class="form-control"  name="image" id="image" required>
+                        </div>
+                       
                         <div class="col-12">
                             <label for="category_id">Danh mục:</label>
                             <select name="category_id" id="category_id" required>
@@ -83,7 +88,7 @@
                         <div class="col-12">
                             <br>
                             <div class="d-grid">
-                                <a href="/index.php?/act=product-create"><button class="btn btn-primary btn-lg"
+                                <a href="/index.php?act=product-create"><button class="btn btn-primary btn-lg"
                                         type="submit">Thêm mới</button></a>
                             </div>
                         </div>
@@ -102,6 +107,5 @@
 
             </div>
         </div>
-    </div>
     </div>
 </section>

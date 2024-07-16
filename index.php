@@ -24,6 +24,8 @@ match ($act) {
     'handleContactForm' => handleContactForm(),
     '/about' => aboutIndex(),
     '/product'=> productDetail($_GET['id']),
+    '/signup'=> signup(),
+    '/uploadUser' => handleUserForm(),
    
 
 
