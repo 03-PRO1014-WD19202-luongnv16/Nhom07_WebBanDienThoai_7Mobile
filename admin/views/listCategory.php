@@ -192,37 +192,40 @@
                                 </div>
                         </div> -->
 
-        <div class="products">
+        <!-- <div class="products"> -->
 
             <?php if (empty($categorys)): ?>
                 <p>Không có danh muc nao.</p>
             <?php else: ?>
-                <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>name</th>
+                            <th>descripton</th>
+                            <th>adtion</th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <?php foreach ($categorys as $category): ?>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div id="product-1" class="single-product">
-                                <div class="product">
+                        <tr>
+                            <td><?=$category['category_id']?></td>
+                            <td><?=$category['name']?></td>
+                            <td><?=$category['description']?></td>
+                            <td>
+                            <a href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['category_id'] ?>"><button class="btn btn-danger">xóa</button></a>
+                            <a href="<?= BASE_URL_ADMIN ?>?act=editCategory&id=<?= $category['category_id'] ?>"> <button class="btn btn-warning"> Sửa</button></a>
+                            </td>
+                        </tr>
 
-
-
-                                    <div class="part-2">
-                                        <h3><?= htmlspecialchars($category['name']) ?></h3>
-                                        <p><?= htmlspecialchars($category['description']) ?></p>
-                                        <a href="<?= BASE_URL_ADMIN ?>?act=category-delete&id=<?= $category['category_id'] ?>"><button class="btn btn-danger">xóa</button></a>
-                                       <a href="<?= BASE_URL_ADMIN ?>?act=editCategory&id=<?= $category['category_id'] ?>"> <button class="btn btn-warning"> Sửa</button></a>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     <?php endforeach; ?>
-                    <hr>
-                </div>
+                    </tbody>
+                </table>
                
                
 
             <?php endif; ?>
-        </div>
+        <!-- </div> -->
 
 
     </div>

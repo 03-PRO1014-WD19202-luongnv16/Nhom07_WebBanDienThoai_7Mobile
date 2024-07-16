@@ -197,28 +197,37 @@
             <?php if (empty($users)): ?>
                 <p>Không có người dùng nào.</p>
             <?php else: ?>
-                <div class="row">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>first name</th>
+                            <th>last name</th>
+                            <th>email</th>
+                            <th>role</th>
+                            <th>
+                                action
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
                     <?php foreach ($users as $user): ?>
-                        <div class="col-md-6 col-lg-4 col-xl-3">
-                            <div id="product-1" class="single-product">
-                                <div class="product">
+                        <tr>
+                            <td><?=$user['user_id']?></td>
+                            <td><?=$user['first_name']?></td>
+                            <td><?=$user['last_name']?></td>
+                            <td><?=$user['email']?></td>
+                            <td><?=$user['role']?></td>
+                            <td>
+                            <!-- <a href="<?= BASE_URL_ADMIN ?>?act=user-delete&id=<?= $user['user_id'] ?>"><button class="btn btn-danger">xóa</button></a>
+                            <a href="<?= BASE_URL_ADMIN ?>?act=editUser&id=<?= $user['user_id'] ?>"> <button class="btn btn-warning"> Sửa</button></a> -->
+                            <a href="<?= BASE_URL_ADMIN ?>?act=detailUser&id=<?= $user['user_id'] ?>"> <button class="btn btn-info"> detail</button></a>
+                            </td>
+                        </tr>
 
-
-
-                                    <div class="part-2">
-                                        <h4><?= htmlspecialchars($user['first_name']) ?>  <?= htmlspecialchars($user['last_name']) ?></h4>
-                                        <!-- <p><?= htmlspecialchars($user['password']) ?></p> -->
-                                        <p><?= htmlspecialchars($user['email']) ?></p>
-                                        <p><?= htmlspecialchars($user['role']) ?></p>
-                                       <a href="<?= BASE_URL_ADMIN ?>?act=userDetail&id=<?= $user['user_id'] ?>"> <button class="btn btn-danger"> chi tiết</button></a>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     <?php endforeach; ?>
-                    <hr>
-                </div>
+                    </tbody>
+                </table>
                
                
 
@@ -226,6 +235,5 @@
         </div>
 
 
-    </div>
     </div>
 </section>

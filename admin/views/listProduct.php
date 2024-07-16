@@ -220,7 +220,7 @@
                         <tr>
                             <td><?= htmlspecialchars($product['product_id']) ?></td>
                             <td scope="row"> <img src="../upload/image/<?= htmlspecialchars($product['image']) ?>"
-                                    alt="<?= htmlspecialchars($product['name']) ?>" style="width:250px;height: 300px;"> </td>
+                                    alt="<?= htmlspecialchars($product['name']) ?>" style="width: 300px;height: 250px;"> </td>
                             <td><?= htmlspecialchars($product['name']) ?></td>
 
                             <td><?= htmlspecialchars($product['price']) ?></td>
