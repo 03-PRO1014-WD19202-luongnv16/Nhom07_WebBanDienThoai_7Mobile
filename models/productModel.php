@@ -14,7 +14,7 @@ function getAllProducts()
 
 function getProductById($id) {
     global $conn;
-    $sql = "SELECT * FROM products WHERE id = $id";
+    $sql = "SELECT * FROM products WHERE product_id = $id";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);

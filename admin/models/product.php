@@ -15,9 +15,9 @@ LEFT JOIN categories c ON p.category_id = c.category_id";
      return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function saveProduct($name, $description, $category_id, $priceSale, $stock, $price ,$image) {
+function saveProduct($name, $description, $category_id, $priceSale, $stock, $price ,$image, $ram, $rom,  $color) {
     global $conn; // Sử dụng kết nối từ connect.php
-    $sql = "INSERT INTO products (name, description, category_id, priceSale, stock, price, image) VALUES (:name,:description,:category_id,:priceSale,:stock,:price,:image)";
+    $sql = "INSERT INTO products (name, description, category_id, priceSale, stock, price, image, ram, rom, color) VALUES (:name,:description,:category_id,:priceSale,:stock,:price,:image,:ram,:rom,:color)";
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':name', $name);
     $stmt->bindParam(':description', $description);
@@ -26,6 +26,11 @@ function saveProduct($name, $description, $category_id, $priceSale, $stock, $pri
     $stmt->bindParam(':stock', $stock);
     $stmt->bindParam(':price', $price);
     $stmt->bindParam(':image', $image);
+    $stmt->bindParam(':ram', $ram);
+    $stmt->bindParam(':rom', $rom);
+    $stmt->bindParam(':color', $color);
+
+
 
     return $stmt->execute();
 }

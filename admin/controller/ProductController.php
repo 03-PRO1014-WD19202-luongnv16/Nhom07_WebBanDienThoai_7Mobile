@@ -23,6 +23,10 @@ function handleProductForm() {
     $description = $_POST['description'];
     $price= $_POST['price'];
     $stock=$_POST['stock'];
+    $ram=$_POST['ram'];
+    $rom=$_POST['rom'];
+    $color = $price['color'];
+
 
 
     $image = $_FILES['image']['name'];
@@ -34,7 +38,7 @@ function handleProductForm() {
     $priceSale= $_POST['priceSale'];
     $name = $_POST['name'];
 
-    if (saveProduct($name, $description, $category_id, $priceSale, $stock,$price, $image)) {
+    if (saveProduct($name, $description, $category_id, $priceSale, $stock,$price, $image ,$ram, $rom, $color)) {
         $success = "Thêm mới thành công";
     } else {
         $error = "Có lỗi xảy ra. Vui lòng thử lại.";

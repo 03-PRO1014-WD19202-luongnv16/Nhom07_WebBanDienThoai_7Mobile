@@ -227,8 +227,7 @@
                                         <p>Còn lại: <?= htmlspecialchars($product['stock']) ?></p>
                                         <!-- <p>Ngày tạo: <?= htmlspecialchars($product['created_at']) ?></p> -->
 
-                                       <a href="/index.php?act=/product&id=1"> <button class="btn btn-secondary"> chi tiết sản phẩm </button></a>
-
+                                       <a href="<?= BASE_URL ?>?act=/product&id=<?=$product['product_id']?>"> <button class="btn btn-secondary"> chi tiết sản phẩm </button></a>
                                     </div>
                                 </div>
                             </div>

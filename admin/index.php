@@ -40,7 +40,6 @@ match ($act) {
 
 
 
-    //tất cả các chức năng cần truyền vào id đều lỗi chưa sửa được đường dẫn @@
 };
 
 require_once '../commons/disconnect.php';
