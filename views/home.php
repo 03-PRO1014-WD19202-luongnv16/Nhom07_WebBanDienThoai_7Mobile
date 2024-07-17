@@ -206,7 +206,7 @@
                     </p>
                     <!-- <p>Danh mục: <?= htmlspecialchars($postTopView['category_name']) ?></p> -->
                     <p>Còn lại: <?= htmlspecialchars($postTopView['stock']) ?></p>
-                    <p><button>Thêm Vào giỏ hàng</button></p>
+                    <a href="<?= BASE_URL ?>?act=/product&id=<?=$postTopView['product_id']?>"><p><button style="border-radius: 8px;">Chi tiết</button></p></a>
                 </div>
             <?php endforeach; ?>
 

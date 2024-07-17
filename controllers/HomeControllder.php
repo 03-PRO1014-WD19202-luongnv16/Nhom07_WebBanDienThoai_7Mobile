@@ -6,6 +6,7 @@ function homeIndex()
     $view = 'home';
     $postTopViews = postTopViewOnHome();
     $postTopSales = getTop3BiggestDiscountProducts();
+    $categorys = getAllCategory();
     //     $postTop6Latest = postTop6LatestOnHome();
     //     $postTop5Trending = postTop5TrendingOnHome();
     require_once PATH_VIEW . 'layouts/master.php';
