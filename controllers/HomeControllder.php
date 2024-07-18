@@ -10,6 +10,7 @@ function homeIndex()
     //     $postTop6Latest = postTop6LatestOnHome();
     //     $postTop5Trending = postTop5TrendingOnHome();
     require_once PATH_VIEW . 'layouts/master.php';
+    require_once './views/home.php';
 } 
 
 function aboutIndex() {

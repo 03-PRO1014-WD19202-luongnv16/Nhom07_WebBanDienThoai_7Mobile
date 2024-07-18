@@ -25,7 +25,7 @@ function handleProductForm() {
     $stock=$_POST['stock'];
     $ram=$_POST['ram'];
     $rom=$_POST['rom'];
-    $color = $price['color'];
+    $color = $_POST['color'];
 
 
 
