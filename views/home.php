@@ -191,13 +191,17 @@
         <div class="row g-5">
             <?php foreach ($postTopViews as $postTopView): ?>
                 <div class="card">
+                    <div class="row" style="justify-content: center;">
                     <img src="../upload/image/<?= htmlspecialchars($postTopView['image']) ?>"
-                        alt="<?= htmlspecialchars($postTopView['name']) ?>" style="width:100%">
+                        alt="<?= htmlspecialchars($postTopView['name']) ?>" style="height: 200px; width: 200px;">
+                        </div>
+                        <div class="row" style="height:95px; ">
                     <h1><?= htmlspecialchars($postTopView['name']) ?></h1>
-                    <p class="price">
+                    </div>
+                    <p class="price" style="margin-top: 15px;">
                         Giá:
                         <?php if (!empty($postTopView['priceSale'])): ?>
-                            <span style="text-decoration: line-through;"><?= htmlspecialchars($postTopView['price']) ?>
+                            <span style="text-decoration: line-through;" ><?= htmlspecialchars($postTopView['price']) ?>
                                 VND</span>
                             <span><?= htmlspecialchars($postTopView['priceSale']) ?> VND</span>
                         <?php else: ?>

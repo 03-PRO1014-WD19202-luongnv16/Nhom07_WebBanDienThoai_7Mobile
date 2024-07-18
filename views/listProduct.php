@@ -199,16 +199,19 @@
                 <div class="row">
                     <?php foreach ($products as $product): ?>
                         <div class="col-md-6 col-lg-4 col-xl-3">
+                            <hr>
                             <div id="product-1" class="single-product">
                                 <div class="product">
-
+                                 <div class="row" style="justify-content: center;">
                                     <img src="../upload/image/<?= htmlspecialchars($product['image']) ?>"
-                                        alt="<?= htmlspecialchars($product['name']) ?>" style="width:250px;height: 300px;">
-
+                                        alt="<?= htmlspecialchars($product['name']) ?>" style="width:230px;height: 200px;">
+                                        </div>
 
 
                                     <div class="part-2">
+                                        <div class="row" style=" height: 70px;">
                                         <h3><?= htmlspecialchars($product['name']) ?></h3>
+                                        </div>
 
                                         <p>
                                             Giá:
@@ -223,7 +226,7 @@
                                         </p>
                                         <p>Danh mục: <?= htmlspecialchars($product['category_name']) ?></p>
 
-                                        <p><?= htmlspecialchars($product['description']) ?></p>
+                                        <p style="height:100px;"><?= htmlspecialchars($product['description']) ?></p>
                                         <p>Còn lại: <?= htmlspecialchars($product['stock']) ?></p>
                                         <!-- <p>Ngày tạo: <?= htmlspecialchars($product['created_at']) ?></p> -->
 

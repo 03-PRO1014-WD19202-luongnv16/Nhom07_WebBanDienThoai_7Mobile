@@ -18,7 +18,6 @@
                         <li><a href="<?= BASE_URL ?>"><?= $category['name']?></a></li>
                        
                         <?php endforeach; ?>
-
                     </ul>
                 </li>
 
