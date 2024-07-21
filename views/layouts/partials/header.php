@@ -1,7 +1,8 @@
 <header id="header" class="header d-flex align-items-center fixed-top">
+
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
-        <a href="<?= BASE_URL?>" class="logo d-flex align-items-center">
+        <a href="<?= BASE_URL ?>" class="logo d-flex align-items-center">
             <!-- Uncomment the line below if you also wish to use an image logo -->
             <!-- <img src="<?= BASE_URL ?>assets/client/assets/img/logo.png" alt=""> -->
             <h1>7Mobile</h1>
@@ -9,14 +10,17 @@
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a href="<?= BASE_URL?>">Trang chủ</a></li>
+                <li><a href="<?= BASE_URL ?>">Trang chủ</a></li>
                 <!-- <li><a href="single-post.html">Single Post</a></li> -->
-                <li class="dropdown"><a href="/index.php?act=/products"><span>Sản phẩm</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <li class="dropdown"><a href="/index.php?act=/products"><span>Sản phẩm</span> <i
+                            class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
-                    <?php foreach ($categorys as $category): ?>
+                        <?php foreach ($categorys as $category): ?>
 
-                        <li><a href="/index.php?act=/productsByCategory&category_id=<?= $category['category_id']?>"><?= $category['name']?></a></li>
-                       
+                            <li><a
+                                    href="/index.php?act=/productsByCategory&category_id=<?= $category['category_id'] ?>"><?= $category['name'] ?></a>
+                            </li>
+
                         <?php endforeach; ?>
                     </ul>
                 </li>
@@ -30,9 +34,20 @@
             <a href="#" class="mx-2"><span class="bi-facebook"></span></a>
             <a href="#" class="mx-2"><span class="bi-twitter"></span></a>
             <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
-            <a href="/index.php?act=/login" class="mx-2"><span>Login</span></a>
+            <?php if (isset($_SESSION['user_id'])): ?>
+                <a href="#" class="mx-2"><span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span></a>
+                <!-- <a href="/index.php?act=/admin" class="mx-2"><span>Admin Panel</span></a> -->
+                <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+                <a href="<?= BASE_URL_ADMIN?>?act=/" class="mx-2"><span>Admin Panel</span></a>
+            <?php endif; ?>
+                <a href="/index.php?act=/logout" class="mx-2"><span>Logout</span></a>
+            <?php else: ?>
+                <a href="/index.php?act=/loginform" class="mx-2"><span>Login</span></a>
+                <a href="/index.php?act=/signup" class="mx-2"><span>Sign Up</span></a>
+            <?php endif; ?>
+            <!-- <a href="/index.php?act=/loginform" class="mx-2"><span>Login</span></a>
             <a href="/index.php?act=/signup" class="mx-2"><span>Sign up</span></a>
-            <a href="/index.php?act=/viewCart" class="mx-2"><span>Cart</span></a>
+            <a href="/index.php?act=/viewCart" class="mx-2"><span>Cart</span></a> -->
 
 
 
