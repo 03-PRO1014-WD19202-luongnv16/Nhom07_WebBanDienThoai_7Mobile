@@ -15,12 +15,16 @@ function homeIndex()
 
 function aboutIndex() {
     $view = 'about';
+    $categorys = getAllCategory();
+
     require_once PATH_VIEW . 'layouts/master.php';
     require_once './views/about.php';
 }
 
 function contactIndex() {
     $view = 'contact';
+    $categorys = getAllCategory();
+
     require_once PATH_VIEW . 'layouts/master.php';
     require_once './views/contact.php';
 }
@@ -30,6 +34,8 @@ function handleContactForm() {
     $name = $_POST['name'];
     $email = $_POST['email'];
     $message = $_POST['message'];
+    $categorys = getAllCategory();
+
 
     if (saveContact($name, $email, $message)) {
         $success = "Cảm ơn bạn đã liên hệ!";
@@ -39,6 +45,17 @@ function handleContactForm() {
     require_once PATH_VIEW . 'layouts/master.php';
     require_once './views/contact.php';
 }
+
+function productByCategory($category_id) {
+    $view = 'ProductsByCategory';
+    $categorys = getAllCategory();
+
+    $productsByCategory = getProductsByCategory($category_id);
+    require_once PATH_VIEW . 'layouts/master.php';
+    require_once './views/ProductsByCategory.php';
+}
+
+
 
 
 

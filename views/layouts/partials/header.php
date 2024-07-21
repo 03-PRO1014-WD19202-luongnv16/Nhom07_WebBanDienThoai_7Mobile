@@ -10,12 +10,12 @@
         <nav id="navbar" class="navbar">
             <ul>
                 <li><a href="<?= BASE_URL?>">Trang chủ</a></li>
-                <li><a href="single-post.html">Single Post</a></li>
+                <!-- <li><a href="single-post.html">Single Post</a></li> -->
                 <li class="dropdown"><a href="/index.php?act=/products"><span>Sản phẩm</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                     <ul>
                     <?php foreach ($categorys as $category): ?>
 
-                        <li><a href="<?= BASE_URL ?>"><?= $category['name']?></a></li>
+                        <li><a href="/index.php?act=/productsByCategory&category_id=<?= $category['category_id']?>"><?= $category['name']?></a></li>
                        
                         <?php endforeach; ?>
                     </ul>
@@ -32,6 +32,8 @@
             <a href="#" class="mx-2"><span class="bi-instagram"></span></a>
             <a href="/index.php?act=/login" class="mx-2"><span>Login</span></a>
             <a href="/index.php?act=/signup" class="mx-2"><span>Sign up</span></a>
+            <a href="/index.php?act=/viewCart" class="mx-2"><span>Cart</span></a>
+
 
 
             <a href="#" class="mx-2 js-search-open"><span class="bi-search"></span></a>

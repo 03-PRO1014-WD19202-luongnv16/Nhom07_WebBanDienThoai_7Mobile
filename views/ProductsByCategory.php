@@ -167,13 +167,13 @@
         <div class="row justify-content-center text-center">
             <div>
                 <div class="header">
-                    <h3>Product</h3>
-                    <h2>Tất cả sản phẩm</h2>
+                    <h3>Product By Category</h3>
+                    <h2>Danh mục</h2>
                 </div>
             </div>
         </div>
-
-        <!--        Single Product 
+      
+                 <!--        Single Product 
                         <div class="col-md-6 col-lg-4 col-xl-3">
                                 <div id="product-4" class="single-product">
                                         <div class="part-1">
@@ -193,7 +193,7 @@
                         </div> -->
 
         <div class="products">
-            <ul style=" text-align: center;">
+        <ul style=" text-align: center;">
                 <?php foreach ($categorys as $category): ?>
 
                     <li style="list-style:none; display:inline-block;">
@@ -202,24 +202,26 @@
 
                 <?php endforeach; ?>
             </ul>
-            <?php if (empty($products)): ?>
+            <?php if (empty($productsByCategory)): ?>
                 <p>Không có sản phẩm nào.</p>
+               
             <?php else: ?>
                 <div class="row">
-                    <?php foreach ($products as $product): ?>
+                    <?php foreach ($productsByCategory as $product): ?>
+                        <!-- <?= print_r($productsByCategory) ?> -->
                         <div class="col-md-6 col-lg-4 col-xl-3">
                             <hr>
                             <div id="product-1" class="single-product">
                                 <div class="product">
-                                    <div class="row" style="justify-content: center;">
-                                        <img src="../upload/image/<?= htmlspecialchars($product['image']) ?>"
-                                            alt="<?= htmlspecialchars($product['name']) ?>" style="width:230px;height: 200px;">
-                                    </div>
+                                 <div class="row" style="justify-content: center;">
+                                    <img src="../upload/image/<?= htmlspecialchars($product['image']) ?>"
+                                        alt="<?= htmlspecialchars($product['name']) ?>" style="width:230px;height: 200px;">
+                                        </div>
 
 
                                     <div class="part-2">
                                         <div class="row" style=" height: 70px;">
-                                            <h3><?= htmlspecialchars($product['name']) ?></h3>
+                                        <h3><?= htmlspecialchars($product['name']) ?></h3>
                                         </div>
 
                                         <p>
@@ -239,8 +241,7 @@
                                         <p>Còn lại: <?= htmlspecialchars($product['stock']) ?></p>
                                         <!-- <p>Ngày tạo: <?= htmlspecialchars($product['created_at']) ?></p> -->
 
-                                        <a href="<?= BASE_URL ?>?act=/product&id=<?= $product['product_id'] ?>"> <button
-                                                class="btn btn-secondary"> chi tiết sản phẩm </button></a>
+                                       <a href="<?= BASE_URL ?>?act=/product&id=<?=$product['product_id']?>"> <button class="btn btn-secondary"> chi tiết sản phẩm </button></a>
                                     </div>
                                 </div>
                             </div>
@@ -248,8 +249,8 @@
                     <?php endforeach; ?>
                     <hr>
                 </div>
-
-
+               
+               
 
             <?php endif; ?>
         </div>
