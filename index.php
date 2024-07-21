@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // Require tất cả các file có trong commons
 
@@ -24,10 +25,9 @@ match ($act) {
     '/about' => aboutIndex(),
     '/signup'=> signup(),
     '/uploadUser' => handleUserForm(),
-    '/product'=> productDetail($_GET['id'])
-   
-
-
+    '/product'=> productDetail($_GET['id']),
+    '/productsByCategory'=> productByCategory($_GET['category_id']),
+    
 };
 //...
 

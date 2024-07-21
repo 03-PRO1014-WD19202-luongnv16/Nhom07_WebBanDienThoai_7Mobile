@@ -1,6 +1,8 @@
 <?php 
 function signup(){
     $view = 'signup';
+    $categorys = getAllCategory();
+
     require_once PATH_VIEW . 'layouts/master.php';
     require_once './views/signup.php';
 }
