@@ -64,6 +64,10 @@ function productByCategory($category_id) {
 
 
 
+
+
+
+
 // Luong mvc 1: vao index
 //     -> duoc dieu huong den ham xu ly logic trong controller tuong ung
 //     -> ham se tra view luon vi ko tuong tac voi model 

@@ -13,3 +13,11 @@ function saveUser($username, $email, $first_name,$last_name,$phone,$address,$pas
     $stmt->bindParam(':password', $password);
     return $stmt->execute();
 }
+
+// function getUserByUsername($username) {
+//     global $conn;
+//     $sql = "SELECT * FROM users WHERE username = :username LIMIT 1";
+//     $stmt = $conn->prepare($sql);
+//     $stmt->execute(['username' => $username]);
+//     return $stmt->fetch();
+// }
