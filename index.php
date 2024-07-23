@@ -27,6 +27,11 @@ match ($act) {
     '/uploadUser' => handleUserForm(),
     '/product'=> productDetail($_GET['id']),
     '/productsByCategory'=> productByCategory($_GET['category_id']),
+    'cart-add' => cartAdd($_GET['product_id'], $_GET['quantity']),
+    'cart-list' => cartList(),
+    'cart-inc' => cartInc($_GET['product_id']),
+    'cart-dec' => cartDec($_GET['product_id']),
+    'cart-del' => cartDel($_GET['product_id']),
     
 };
 //...
