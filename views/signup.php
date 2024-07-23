@@ -149,7 +149,6 @@ body {
         <input type="text" class="input" placeholder="a" name="password">
         <label for="" class="label">Password</label>
       </div>
-
     
 
       <input type="submit" class="submitBtn" value="Sign up">

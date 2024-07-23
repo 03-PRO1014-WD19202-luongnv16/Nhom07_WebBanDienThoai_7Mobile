@@ -1,6 +1,7 @@
-<?php 
+<?php
 
-function signup(){
+function signup()
+{
     $view = 'signup';
     $categorys = getAllCategory();
 
@@ -8,7 +9,8 @@ function signup(){
     require_once './views/signup.php';
 }
 
-function handleUserForm(){
+function handleUserForm()
+{
     $view = 'home';
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -19,7 +21,7 @@ function handleUserForm(){
     $password = $_POST['password'];
 
 
-    if (saveUser($username, $email, $first_name,$last_name,$phone,$address,$password)) {
+    if (saveUser($username, $email, $first_name, $last_name, $phone, $address, $password)) {
         $success = "Đăng ký thành công!";
     } else {
         $error = "Có lỗi xảy ra. Vui lòng thử lại.";
@@ -28,7 +30,8 @@ function handleUserForm(){
     require_once './views/index.php';
 }
 
-function loginform(){
+function loginform()
+{
     $view = 'login';
     $categorys = getAllCategory();
     require_once PATH_VIEW . 'layouts/master.php';
@@ -64,17 +67,25 @@ function login($username, $password)
         $_SESSION['username'] = $user['username'];
         $_SESSION['first_name'] = $user['first_name'];
         $_SESSION['role'] = $user['role'];
-        
+       
+
+
+        if (isset($_SESSION['redirect_to_checkout'])) {
+            unset($_SESSION['redirect_to_checkout']); // Hủy bỏ biến session
+            header('Location: index.php?act=/checkout');
+            exit;
+        }
+
         header('Location: index.php?act=/');
         exit();
     } else {
         $error = 'Username hoặc mật khẩu không đúng';
     }
-    $view='login';
+    $view = 'login';
     $categorys = getAllCategory();
     require_once PATH_VIEW . 'layouts/master.php';
     require_once './views/login.php';
-   
+
 }
 
 function logout()
@@ -82,7 +93,7 @@ function logout()
     session_start();
     session_unset();
     session_destroy();
-    
+
     header('Location: index.php?act=/');
     exit();
 }

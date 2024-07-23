@@ -30,7 +30,12 @@ match ($act) {
     '/loginform'=>loginform(),
     '/login' => handleLogin(),
     '/logout' => handleLogout(),
-    
+    '/cartForm'=> cartform(),
+    '/addToCart'=> addToCart(),
+    '/removeProductFromCart' => removeFromCart(),
+    '/checkout' => checkout(),
+    '/processCheckout'=>processCheckout(),
+    '/paymentSuccess'=> paymentSuccess(),
 };
 
 

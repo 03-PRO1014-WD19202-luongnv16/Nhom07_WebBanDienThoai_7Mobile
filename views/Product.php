@@ -21,7 +21,7 @@
   }
 </style>
 <div class="container" style="margin-top: 120px;">
-  <form action="/index.php?act=/addToCart" enctype="multipart/form-data" method="POST">
+  <form action="<?= BASE_URL ?>?act=/addToCart" enctype="multipart/form-data" method="post">
     <div class="row gx-5">
       <aside class="col-lg-6">
         <div class="border rounded-4 mb-3 d-flex justify-content-center">
@@ -47,7 +47,7 @@
             <input type="text" value=" <?= $product['name'] ?>" class="inputProduct" disabled>
             <!-- <?= $product['name'] ?> -->
           </h3>
-          <input type="text" value="<?= $product['product_id']?>" hidden disabled name="product_id">
+          <input type="number" value="<?= $product['product_id']?>" hidden  name="product_id">
           <div class="d-flex flex-row my-3">
             <!-- <div class="text-warning mb-1 me-2">
               <i class="fa fa-star"></i>
@@ -60,10 +60,10 @@
               </span> -->
             <!-- </div> -->
             <!-- <span class="text-muted"><i class="fas fa-shopping-basket fa-sm mx-1"></i>154 orders</span> -->
-            <span class="text-success">
+            <!-- <span class="text-success">
               stock:
               <input class="inputProduct" type="text" value="<?= $product['stock'] ?>" disabled>
-            </span>
+            </span> -->
           </div>
 
           <div class="mb-3">
@@ -110,7 +110,7 @@
           <!-- col.// -->
           <div class="col-md-4 col-6 mb-3">
             <label class="mb-2 d-block">Số lượng</label>
-            <input type="number"  name="quantity" style="border-radius: 8px;" min="1" value="1">
+            <input type="number"  name="quantity" style="border-radius: 8px; width:55px;" min="1" value="1">
 
             <div class="input-group mb-3" style="width: 170px;">
               <!-- <button class="btn btn-white border border-secondary px-3" type="button" id="button-addon1"
@@ -127,7 +127,7 @@
           </div>
         </div>
         <!-- <a href="#" class="btn btn-warning shadow-0"> Buy now </a> -->
-        <button type="submit" class="btn btn-info">  <i class="me-1 fa fa-shopping-basket"></i> Add to cart</button>
+        <button type="submit" class="btn btn-secondary">  <i class="me-1 fa fa-shopping-basket"></i> Add to cart</button>
         <!-- <a href="#" class="btn btn-light border border-secondary py-2 icon-hover px-3"> <i class="me-1 fa fa-heart fa-lg"></i> Save </a>-->
     </div>
     </main>

@@ -39,11 +39,15 @@
                 <!-- <a href="/index.php?act=/admin" class="mx-2"><span>Admin Panel</span></a> -->
                 <?php if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
                 <a href="<?= BASE_URL_ADMIN?>?act=/" class="mx-2"><span>Admin Panel</span></a>
+                <a href="<?= BASE_URL?>?act=/cartForm" class="mx-2"><span>Giỏ hàng</span></a>
+
             <?php endif; ?>
                 <a href="/index.php?act=/logout" class="mx-2"><span>Logout</span></a>
             <?php else: ?>
                 <a href="/index.php?act=/loginform" class="mx-2"><span>Login</span></a>
                 <a href="/index.php?act=/signup" class="mx-2"><span>Sign Up</span></a>
+                <a href="<?= BASE_URL?>?act=/cartForm" class="mx-2"><span>Giỏ hàng</span></a>
+
             <?php endif; ?>
             <!-- <a href="/index.php?act=/loginform" class="mx-2"><span>Login</span></a>
             <a href="/index.php?act=/signup" class="mx-2"><span>Sign up</span></a>
