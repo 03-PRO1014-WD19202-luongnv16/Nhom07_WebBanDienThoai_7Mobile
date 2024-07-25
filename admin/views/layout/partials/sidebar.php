@@ -79,12 +79,11 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
             <i class="fab fa-apple"></i>
-            <span>Quan ly Post</span>
+            <span>Quản Lí Đơn Hàng</span>
         </a>
         <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=posts">List</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=post-create">Add new</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=order">List</a>
             </div>
         </div>
     </li>

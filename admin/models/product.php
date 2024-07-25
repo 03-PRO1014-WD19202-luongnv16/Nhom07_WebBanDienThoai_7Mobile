@@ -7,15 +7,16 @@ function getAllProducts()
     CASE 
         WHEN p.category_id IS NOT NULL THEN c.name 
         ELSE 'không tìm thấy danh mục' 
-    END AS category_name
-FROM products p
-LEFT JOIN categories c ON p.category_id = c.category_id";
-     $stmt = $conn->prepare($sql);
-     $stmt->execute();
-     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        END AS category_name
+        FROM products p
+        LEFT JOIN categories c ON p.category_id = c.category_id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-function saveProduct($name, $description, $category_id, $priceSale, $stock, $price ,$image, $ram, $rom,  $color) {
+function saveProduct($name, $description, $category_id, $priceSale, $stock, $price, $image, $ram, $rom,  $color)
+{
     global $conn; // Sử dụng kết nối từ connect.php
     $sql = "INSERT INTO products (name, description, category_id, priceSale, stock, price, image, ram, rom, color) VALUES (:name,:description,:category_id,:priceSale,:stock,:price,:image,:ram,:rom,:color)";
     $stmt = $conn->prepare($sql);
@@ -35,7 +36,8 @@ function saveProduct($name, $description, $category_id, $priceSale, $stock, $pri
     return $stmt->execute();
 }
 
-function deleteProduct($product_id){
+function deleteProduct($product_id)
+{
     global $conn;
     $sql = "DELETE FROM products WHERE product_id = :product_id";
     $stmt = $conn->prepare($sql);
