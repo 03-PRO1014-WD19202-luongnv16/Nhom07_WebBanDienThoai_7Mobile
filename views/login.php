@@ -112,44 +112,22 @@ body {
 
 <div class="signupFrm">
     <div class="wrapper">
-    <form action="/index.php?act=/uploadUser" class="form" method="post">
-      <h1 class="title">Sign up</h1>
+    <form action="/index.php?act=/login" class="form" method="post" >
+      <h1 class="title">Login</h1>
 
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="username">
-        <label for="" class="label">user name</label>
+        <input type="text" class="input" placeholder="a" name="username" required>
+        <label for="" class="label">username</label >
       </div>
 
       <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="email">
-        <label for="" class="label">Email</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="first_name">
-        <label for="" class="label">First name</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="last_name">
-        <label for="" class="label">Last name</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="phone">
-        <label for="" class="label">phone number</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="address">
-        <label for="" class="label">address</label>
-      </div>
-
-      <div class="inputContainer">
-        <input type="text" class="input" placeholder="a" name="password">
+        <input type="password" class="input" placeholder="a" name="password" required>
         <label for="" class="label">Password</label>
       </div>
-    
+
+      <?php if (isset($error) && $error): ?>
+        <p style="color: red;"><?php echo htmlspecialchars($error); ?></p>
+      <?php endif; ?>
 
       <input type="submit" class="submitBtn" value="Sign up">
     </form>

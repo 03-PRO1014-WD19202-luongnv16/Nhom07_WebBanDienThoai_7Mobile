@@ -30,7 +30,7 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
             <i class="fas fa-user"></i>
-            <span>Quan ly user</span>
+            <span>QUẢN LÝ NGƯỜI DÙNG</span>
         </a>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -40,7 +40,7 @@
         </div>
     </li>
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
             <i class="fab fa-apple"></i>
             <span>Quan ly tag</span>
@@ -51,11 +51,11 @@
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=tag-create">Add new</a>
             </div>
         </div>
-    </li>
+    </li> -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse4" aria-expanded="true" aria-controls="collapse4">
             <i class="fab fa-apple"></i>
-            <span>Quan ly categories</span>
+            <span>QUẢN LÝ DANH MỤC</span>
         </a>
         <div id="collapse4" class="collapse" aria-labelledby="heading4" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -64,7 +64,7 @@
             </div>
         </div>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
             <i class="fab fa-apple"></i>
             <span>Quan ly authors</span>
@@ -75,22 +75,11 @@
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=author-create">Add new</a>
             </div>
         </div>
-    </li>
-    <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
-            <i class="fab fa-apple"></i>
-            <span>Quản Lí Đơn Hàng</span>
-        </a>
-        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=order">List</a>
-            </div>
-        </div>
-    </li>
+    </li> -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse7" aria-expanded="true" aria-controls="collapse7">
             <i class="fab fa-apple"></i>
-            <span>Quan ly Products</span>
+            <span>QUẢN LÝ SẢN PHẨM</span>
         </a>
         <div id="collapse7" class="collapse" aria-labelledby="heading7" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
@@ -100,6 +89,17 @@
         </div>
     </li>
     <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse6" aria-expanded="true" aria-controls="collapse6">
+            <i class="fab fa-apple"></i>
+            <span>QUẢN LÝ ĐƠN HÀNG</span>
+        </a>
+        <div id="collapse6" class="collapse" aria-labelledby="heading6" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=order">List</a>
+            </div>
+        </div>
+    </li>
+    <!-- <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
             <i class="fab fa-apple"></i>
             <span>Quan ly Films</span>
@@ -110,7 +110,7 @@
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=film-create">Add new</a>
             </div>
         </div>
-    </li>
+    </li> -->
     <!-- Nav Item - Utilities Collapse Menu -->
 
 

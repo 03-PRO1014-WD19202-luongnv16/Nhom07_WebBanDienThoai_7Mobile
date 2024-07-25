@@ -236,7 +236,7 @@
                                         <p>Danh mục: <?= htmlspecialchars($product['category_name']) ?></p>
 
                                         <p style="height:100px;"><?= htmlspecialchars($product['description']) ?></p>
-                                        <p>Còn lại: <?= htmlspecialchars($product['stock']) ?></p>
+                                        <!-- <p>Còn lại: <?= htmlspecialchars($product['stock']) ?></p> -->
                                         <!-- <p>Ngày tạo: <?= htmlspecialchars($product['created_at']) ?></p> -->
 
                                         <a href="<?= BASE_URL ?>?act=/product&id=<?= $product['product_id'] ?>"> <button

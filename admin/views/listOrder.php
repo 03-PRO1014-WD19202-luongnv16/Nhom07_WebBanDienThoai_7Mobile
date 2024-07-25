@@ -19,8 +19,17 @@
 
         .btn {
             padding: 6px 12px;
-            color: #fff;
-            background-color: #dc3545;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .btn-btn{
+            padding: 6px 12px;
+            background-color: chocolate;
+            color: white;
             border: none;
             border-radius: 4px;
             cursor: pointer;
@@ -44,7 +53,7 @@
                     <thead>
                         <tr>
                             <th>#</th>
-                            <th>Tên khách hàng</th>
+                            <th>ID khách hàng</th>
                             <th>Ngày đặt hàng</th>
                             <th>Trạng thái</th>
                             <th>Tổng tiền</th>
@@ -59,7 +68,7 @@
                     <?php foreach ($orders as $order): ?>
                         <tr>
                             <td><?=$order['order_id']?></td>
-                            <td><?=$order['username']?></td>
+                            <td><?=$order['user_id']?></td>
                             <td><?=$order['order_date']?></td>
                             <td><?=$order['status']?></td>
                             <td><?=$order['total']?></td>
@@ -69,6 +78,7 @@
                             <td><?=$order['address']?></td>
                             <td>
                                 <a href="<?= BASE_URL_ADMIN ?>?act=order-detail&id=<?= $order['order_id'] ?>"><button class="btn">Chi tiết</button></a>
+                                <a href="<?= BASE_URL_ADMIN ?>?act=suatrangthai&id=<?= $order['order_id'] ?>"><button class="btn-btn">Sửa</button></a>
                             </td>   
                         </tr>
                     <?php endforeach; ?>

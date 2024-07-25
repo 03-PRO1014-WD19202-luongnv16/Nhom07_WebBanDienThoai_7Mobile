@@ -27,9 +27,20 @@ match ($act) {
     '/uploadUser' => handleUserForm(),
     '/product'=> productDetail($_GET['id']),
     '/productsByCategory'=> productByCategory($_GET['category_id']),
+    '/loginform'=>loginform(),
+    '/login' => handleLogin(),
+    '/logout' => handleLogout(),
+    '/cartForm'=> cartform(),
+    '/addToCart'=> addToCart(),
+    '/removeProductFromCart' => removeFromCart(),
+    '/checkout' => checkout(),
+    '/processCheckout'=>processCheckout(),
+    '/paymentSuccess'=> paymentSuccess(),
 
-    
 };
+
+
+
 //...
 
 require_once './commons/disconnect.php';

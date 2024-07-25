@@ -3,22 +3,7 @@
 function getAllOrder()
 {
     global $conn; // Sử dụng kết nối từ connect.php
-    $sql = "SELECT 
-    orders.order_id,
-    orders.user_id,
-    orders.order_date,
-    orders.status,
-    orders.total,
-    users.username,
-    users.First_name,
-    users.email,
-    users.phone,
-    users.address
-FROM 
-    orders
-JOIN 
-    users ON orders.user_id = users.user_id;";
-
+    $sql = "SELECT * FROM  orders";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
