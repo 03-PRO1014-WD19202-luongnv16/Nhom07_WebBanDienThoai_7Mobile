@@ -56,12 +56,12 @@
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse5" aria-expanded="true" aria-controls="collapse5">
             <i class="fab fa-apple"></i>
-            <span>Quan ly authors</span>
+            <span>Quan ly don hang</span>
         </a>
         <div id="collapse5" class="collapse" aria-labelledby="heading5" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=authors">List</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=author-create">Add new</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=orders">List</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=order-create">Add new</a>
             </div>
         </div>
     </li>

@@ -48,7 +48,7 @@ if (!function_exists('checkUniqueEmailForUpdate')) {
 }
 if(!function_exists('getUserAdminByEmailAndPassword')){
 
-    function getUserAdminByEmailAndPassword($email, $password)
+    function getUserClientByEmailAndPassword($email, $password)
     {
         try {
             $sql = "SELECT * FROM users WHERE email = :email AND password = :password AND type = 1 LIMIT 1";

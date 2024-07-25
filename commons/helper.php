@@ -47,3 +47,29 @@ if (!function_exists('get_file_upload')) {
         return $default ?? null;
     }
 }
+if(!function_exists('middleware_auth_check')){
+    function middleware_auth_check($act){
+        if($act == 'login'){
+            if(!empty($_SESSION['user'])){
+                header('Location: ' . BASE_URL_ADMIN);
+                exit();
+            }
+        }elseif(empty($_SESSION['user'])){
+            header('Location: ' . BASE_URL_ADMIN . '?act=login');
+            exit();
+        }
+    }
+}
+if(!function_exists('middleware_auth_check_client')){
+    function middleware_auth_check_client($act){
+        if($act == 'login'){
+            if(!empty($_SESSION['user'])){
+                header('Location: ' . BASE_URL);
+                exit();
+            }
+        }elseif(empty($_SESSION['user'])){
+            header('Location: ' . BASE_URL . '?act=login');
+            exit();
+        }
+    }
+}

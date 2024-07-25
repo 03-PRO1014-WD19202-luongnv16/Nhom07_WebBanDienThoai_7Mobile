@@ -82,6 +82,23 @@ switch ($act) {
         productDelete($_GET['id']);
         break;
 
+    // CRUD Orders
+    case 'orders':
+        orderListAll();
+        break;
+    case 'order-create':
+        orderCreate();
+        break;
+    case 'order-detail':
+        orderShowOne($_GET['id']);
+        break;
+    case 'order-update':
+        orderUpdate($_GET['id']);
+        break;
+    case 'order-delete':
+        orderDelete($_GET['id']);
+        break;
+
     default:
         // Add any default behavior here
         break;

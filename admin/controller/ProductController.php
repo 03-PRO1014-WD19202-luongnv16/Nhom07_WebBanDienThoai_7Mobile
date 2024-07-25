@@ -31,8 +31,43 @@ function productCreate(){
             "description" => $_POST['description'] ?? null,
             "stock" => $_POST['stock'] ?? null,
             "created_at" => $_POST['created_at'] ?? null,
-            "hinh_anh" => $_FILES['hinh_anh'] ?? null,
+            "hinh_anh" =>  null,
         ];
+        // Xử lý upload hình ảnh
+        if (isset($_FILES['hinh_anh']) && $_FILES['hinh_anh']['error'] === UPLOAD_ERR_OK) {
+            $uploadDir = '../uploads/images/';
+            if (!is_dir($uploadDir)) {
+                mkdir($uploadDir, 0777, true);
+            }
+
+            $image = $_FILES['hinh_anh'];
+            $targetFile = $uploadDir . basename($image["name"]);
+            $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+
+            // Kiểm tra file hình ảnh
+            $check = getimagesize($image["tmp_name"]);
+            if ($check === false) {
+                $errors[] = "File không phải là hình ảnh.";
+            }
+
+            // Kiểm tra kích thước file
+            if ($image["size"] > 500000) {
+                $errors[] = "File quá lớn.";
+            }
+
+            // Kiểm tra định dạng file
+            if (!in_array($imageFileType, ["jpg", "jpeg", "png", "gif"])) {
+                $errors[] = "Chỉ chấp nhận file JPG, JPEG, PNG & GIF.";
+            }
+
+            if (empty($errors)) {
+                if (move_uploaded_file($image["tmp_name"], $targetFile)) {
+                    $data["hinh_anh"] = $targetFile;
+                } else {
+                    $errors[] = "Đã xảy ra lỗi khi tải lên file.";
+                }
+            }
+        }
         validateProductCreate($data);
         if (!empty($errors)) {
             $_SESSION['errors'] = $errors;
@@ -80,7 +115,7 @@ function productUpdate($id){
             "description" => $_POST['description'] ?? null,
             "stock" => $_POST['stock'] ?? null,
             "created_at" => $_POST['created_at'] ?? null,
-            "hinh_anh" => $_POST['hinh_anh'] ?? null,
+            // "hinh_anh" => $_POST['hinh_anh'] ?? null,
         ];
         $errors = validateProductUpdate($id, $data);
         if (!empty($errors)) {

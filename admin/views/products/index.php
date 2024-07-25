@@ -45,7 +45,7 @@
                                 <td><?= $product['created_at'] ?></td>
 
                                 <td>
-                                    <img src="<?= BASE_URL . $product['hinh_anh'] ?>" alt="" width="100px">
+                                    <img src="../uploads/images/<?=htmlspecialchars($product['hinh_anh'])  ?>" alt="<?= htmlspecialchars($product['name']) ?>" width="100px">
                                 </td>
                                 <td>
                                     <a href="<?= BASE_URL_ADMIN ?>?act=product-detail&id=<?= $product['id'] ?>" class="btn btn-info">Show</a>
