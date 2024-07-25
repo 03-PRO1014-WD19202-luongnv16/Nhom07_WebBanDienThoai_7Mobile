@@ -37,8 +37,10 @@ match ($act) {
     'product-add'=> productAdd(),
     'product-create'=> handleProductForm(),
     'product-delete' => removeProduct($_GET['id']),
-
-
+    // Don hang
+    'order' => orderIndex(),
+    'order-detail' => orderDetail($_GET['id']),
+    
 
 };
 

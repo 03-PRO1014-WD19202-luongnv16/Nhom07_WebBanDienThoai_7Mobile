@@ -47,3 +47,41 @@ if (!function_exists('get_file_upload')) {
         return $default ?? null;
     }
 }
+
+if (!function_exists('showOne')) {
+    function showOne($tableName, $id)
+    {
+        try{
+            $sql = "SELECT * FROM $tableName where id = :id LIMIT 1";
+            $stmt = $GLOBALS['conn']->prepare($sql);
+            $stmt->bindParam(":id", $id);
+            $stmt->execute();
+            return $stmt->fetch();
+        } catch(\Exception $e){
+            debug($e);
+        }
+    }
+}
+
+if (!function_exists('insert_get_last_id')) {
+    function insert_get_last_id($tableName, $data = [])
+    {
+        try{
+            $strKeys = get_str_keys($data);
+            $virtualParams = get_virtual_params($data);
+
+            $sql = "INSERT INTO $tableName($strKeys) VALUE ($virtualParams)";
+
+            $stmt = $GLOBALS['conn']->prepare($sql);
+
+            foreach ($data as $fieldName => &$value){
+                $stmt->bindParam(":$fieldName", $value);
+            }
+            $stmt->execute();
+            return $GLOBALS['conn']->lastInsertId();
+        } catch(\Exception $e){
+            debug($e);
+        }
+    }
+}
+
