@@ -29,18 +29,22 @@ function addToCart()
     if (isset($_SESSION['cart'][$idProduct])) {
         $_SESSION['cart'][$idProduct]['quantity'] += $quantity;
     } else {
+
+        $price = $product['price']; // Giá thường
+        if (!is_null($product['priceSale']) && $product['priceSale'] > 0) {
+            $price = $product['priceSale']; // Giá sale nếu có và lớn hơn 0
+        }
+
         $_SESSION['cart'][$idProduct] = [
             'product_id' => $idProduct,
             'name' => $product['name'],
-            'price' => $product['price'],
+            'price' => $price,
             'quantity' => $quantity,
             'image' => $product['image'],
             'ram' => $product['ram'],
             'rom' => $product['rom'],
             'color' => $product['color'],
-
-
-
+           
 
         ];
     }
