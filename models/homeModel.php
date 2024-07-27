@@ -12,8 +12,11 @@ function postTopViewOnHome()
 function getTop3BiggestDiscountProducts()
 {
     global $conn;
-    $sql = "SELECT *, (price - priceSale) AS discount FROM products 
-            ORDER BY discount DESC LIMIT 3";
+    $sql =  "SELECT *, (price - priceSale) AS discount 
+    FROM products 
+    WHERE priceSale IS NOT NULL AND priceSale > 0
+    ORDER BY discount DESC 
+    LIMIT 3";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
