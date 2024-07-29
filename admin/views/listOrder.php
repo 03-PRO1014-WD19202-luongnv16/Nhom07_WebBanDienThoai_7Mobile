@@ -57,7 +57,7 @@
                             <th>Ngày đặt hàng</th>
                             <th>Trạng thái</th>
                             <th>Tổng tiền</th>
-                            <th>Tên lót</th>
+                            <th>Tên</th>
                             <th>Email</th>
                             <th>Số điện thoại</th>
                             <th>Địa chỉ</th>
@@ -72,13 +72,12 @@
                             <td><?=$order['order_date']?></td>
                             <td><?=$order['status']?></td>
                             <td><?=$order['total']?></td>
-                            <td><?=$order['First_name']?></td>
+                            <td><?=$order['full_name']?></td>
                             <td><?=$order['email']?></td>
                             <td><?=$order['phone']?></td>
                             <td><?=$order['address']?></td>
                             <td>
                                 <a href="<?= BASE_URL_ADMIN ?>?act=order-detail&id=<?= $order['order_id'] ?>"><button class="btn">Chi tiết</button></a>
-                                <a href="<?= BASE_URL_ADMIN ?>?act=suatrangthai&id=<?= $order['order_id'] ?>"><button class="btn-btn">Sửa</button></a>
                             </td>   
                         </tr>
                     <?php endforeach; ?>
