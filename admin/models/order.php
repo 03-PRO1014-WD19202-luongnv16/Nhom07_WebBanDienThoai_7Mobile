@@ -32,3 +32,4 @@ function getOrderDetails($orderId)
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
+

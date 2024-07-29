@@ -36,7 +36,8 @@ match ($act) {
     '/checkout' => checkout(),
     '/processCheckout'=>processCheckout(),
     '/paymentSuccess'=> paymentSuccess(),
-
+    '/comment' => addReviewController(),
+    
 };
 
 

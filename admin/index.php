@@ -41,7 +41,6 @@ match ($act) {
     'order' => orderIndex(),
     'order-detail' => orderDetail($_GET['id']),
     
-
 };
 
 require_once '../commons/disconnect.php';

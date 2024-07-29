@@ -7,8 +7,6 @@ function orderIndex()
     require_once './views/listOrder.php';
 }
 
-// orderController.php
-
 function orderDetail($orderId)
 {
     $view = 'detailOrder';
