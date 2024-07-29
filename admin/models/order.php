@@ -13,7 +13,8 @@ function getAllOrder()
 function getOrderDetails($orderId)
 {
     global $conn; // Use the connection from connect.php
-    $sql = "SELECT 
+    $sql = 
+    "SELECT 
         orderdetails.order_detail_id,
         orderdetails.order_id,
         orderdetails.product_id,
@@ -31,4 +32,13 @@ function getOrderDetails($orderId)
     $stmt->bindParam(':orderId', $orderId, PDO::PARAM_INT);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
+
+
+function getOrderById($id) {
+    global $conn;
+    $sql = "SELECT * FROM orders WHERE order_id = $id";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
 }

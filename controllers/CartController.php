@@ -100,7 +100,7 @@ function processCheckout()
 {
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $userId = $_SESSION['user_id'];
-        $firstName = $_POST['first_name'];
+        $fullname = $_POST['full_name'];
         $email = $_POST['email'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
@@ -109,7 +109,7 @@ function processCheckout()
             return $sum + ($item['price'] * $item['quantity']);
         }, 0);
 
-        $orderId = createOrder($userId, $total, $firstName, $email, $phone, $address);
+        $orderId = createOrder($userId, $total, $fullname, $email, $phone, $address);
         addOrderDetails($orderId, $cartItems);
         clearCart();
 
