@@ -57,7 +57,7 @@
                       <div class="media align-items-center">
                         <img src="../upload/image/<?= $item['image']?>" class="" style="width: 30%; float: left;" alt="<?= $item['image']?>">
                         <div class="media-body">
-                          <a href="#" class="d-block text-dark"><?= $item['name'] ?></a>
+                          <a href="<?=BASE_URL?>?act=/product&id=<?=$item['product_id']?>" class="d-block text-dark"><?= $item['name'] ?></a>
                           <small>
                             <span class="text-muted">Màu: <?= $item['color'] ?> </span>&nbsp;
                             <!-- <span class="ui-product-color ui-product-color-sm align-text-bottom" style="background:#e81e2c;"></span> &nbsp; -->

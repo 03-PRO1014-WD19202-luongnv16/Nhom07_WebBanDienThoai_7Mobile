@@ -20,3 +20,15 @@ function getProductById($id) {
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
+// function searchProductsByName($searchTerm) {
+//     global $conn;
+//     $sql = "SELECT * FROM products WHERE product_name LIKE :searchTerm";
+//     $stmt = $conn->prepare($sql);
+    
+//     // Thêm ký tự '%' vào trước và sau từ khóa tìm kiếm
+//     $searchTerm = "%$searchTerm%";
+//     $stmt->bindParam(':searchTerm', $searchTerm, PDO::PARAM_STR);
+    
+//     $stmt->execute();
+//     return $stmt->fetchAll(PDO::FETCH_ASSOC);
+// }

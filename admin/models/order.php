@@ -18,7 +18,8 @@ function getOrderById($id) {
 function getOrderDetails($orderId)
 {
     global $conn; // Use the connection from connect.php
-    $sql = "SELECT 
+    $sql = 
+    "SELECT 
         orderdetails.order_detail_id,
         orderdetails.order_id,
         orderdetails.product_id,
@@ -37,4 +38,3 @@ function getOrderDetails($orderId)
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
-

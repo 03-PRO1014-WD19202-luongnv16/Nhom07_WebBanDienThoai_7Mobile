@@ -1,9 +1,9 @@
 <?php
 
-function createOrder($userId, $total, $firstName, $email, $phone, $address ) {
+function createOrder($userId, $total, $fullname, $email, $phone, $address ) {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO orders (user_id, total, First_name, email, phone, address) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->execute([$userId, $total, $firstName, $email, $phone, $address]);
+    $stmt = $conn->prepare("INSERT INTO orders (user_id, total, fullname, email, phone, address) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->execute([$userId, $total, $fullname, $email, $phone, $address]);
     return $conn->lastInsertId();
 }
 

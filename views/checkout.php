@@ -237,18 +237,17 @@
                                                 <div class="row">
                                                     <div class="col-lg-4">
                                                         <div class="mb-3">
-                                                            <label class="form-label" for="billing-name">First
-                                                                name</label>
+                                                            <label class="form-label" for="billing-name">Full name</label>
                                                             <input type="text" class="form-control" id="billing-name"
-                                                                placeholder="Full name" name="first_name" required>
+                                                                placeholder="Full name" name="full_name" required>
                                                         </div>
 
-                                                        <div class="mb-3">
+                                                        <!-- <div class="mb-3">
                                                             <label class="form-label" for="billing-name">last
                                                                 name</label>
                                                             <input type="text" class="form-control" id="billing-name"
                                                                 placeholder="Full name" name="last_name" required>
-                                                        </div>
+                                                        </div> -->
                                                     </div>
                                                     <div class="col-lg-4">
                                                         <div class="mb-3">
