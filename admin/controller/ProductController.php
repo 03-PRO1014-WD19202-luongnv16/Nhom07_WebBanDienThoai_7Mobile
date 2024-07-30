@@ -18,7 +18,6 @@ function productAdd(){
 function handleProductForm() {
     $view = 'addProduct';
     $categorys = getAllCategory();
-
     $category_id = $_POST['category_id'];
     $description = $_POST['description'];
     $price= $_POST['price'];

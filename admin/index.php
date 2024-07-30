@@ -40,8 +40,9 @@ match ($act) {
     // Don hang
     'order' => orderIndex(),
     'order-detail' => orderDetail($_GET['id']),
+    // comment
+    'comment' => listComment(),
     
-
 };
 
 require_once '../commons/disconnect.php';

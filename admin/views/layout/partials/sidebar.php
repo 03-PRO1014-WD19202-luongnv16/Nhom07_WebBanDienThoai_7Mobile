@@ -99,18 +99,17 @@
             </div>
         </div>
     </li>
-    <!-- <li class="nav-item">
+    <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse8" aria-expanded="true" aria-controls="collapse8">
             <i class="fab fa-apple"></i>
-            <span>Quan ly Films</span>
+            <span>QUẢN LÝ BÌNH LUẬN</span>
         </a>
         <div id="collapse8" class="collapse" aria-labelledby="heading8" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=films">List</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=film-create">Add new</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=comment">List</a>
             </div>
         </div>
-    </li> -->
+    </li>
     <!-- Nav Item - Utilities Collapse Menu -->
 
 
