@@ -234,7 +234,7 @@
                                 <button class="btn btn-danger" onclick=" confirm('bạn muốn xóa sản phẩm này ?')">  
                                     <a href="<?= BASE_URL_ADMIN ?>?act=product-delete&id=<?= $product['product_id'] ?>">Xóa</a>
                                 </button>
-                                    <a href="#"> <button class="btn btn-warning">Sửa</button></a>
+                                    <a href="<?= BASE_URL_ADMIN ?>?act=editProduct&id=<?=$product['product_id']?>"> <button class="btn btn-warning">Sửa</button></a>
                                 </div>
                             </td>
                         </tr>

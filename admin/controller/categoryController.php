@@ -63,3 +63,22 @@ function categoryEdit($id) {
 //     require_once PATH_VIEW_ADMIN . 'layout/master.php';
 //     require_once './views/editCategory.php';
 // }
+
+function updateCategoryForm($id) {
+
+    $view = 'editCategory';
+    $id = $_POST['category_id'];
+    $name = $_POST['name'];
+    $description = $_POST['description'];
+    $category = getCategoryById($id);
+
+
+    if (updateCategory($id, $name, $description)) {
+        $success = "Sửa thành công";
+    } else {
+        $error = "Có lỗi xảy ra. Vui lòng thử lại.";
+    }
+
+    require_once PATH_VIEW_ADMIN . 'layout/master.php';
+    require_once './views/editCategory.php';
+}

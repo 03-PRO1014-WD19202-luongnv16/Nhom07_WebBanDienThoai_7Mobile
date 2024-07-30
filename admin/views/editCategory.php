@@ -20,7 +20,7 @@
         <div class="row justify-content-lg-center">
             <div class="col-12 col-lg-9">
                 <div class="bg-white border rounded shadow-sm overflow-hidden"></div>
-                <form action="./index.php?act=category-update" method="POST">
+                <form action="./index.php?act=category-update&id=<?=$category['category_id']?>" method="POST">
                     <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                         <div class="col-12">
 
@@ -55,12 +55,12 @@
               </div> -->
                         <div class="col-12">
                             <label for="message" class="form-label">description <span class="text-danger">*</span></label>
-                            <textarea class="form-control" id="description" name="description" rows="3" required ></textarea>
+                            <textarea class="form-control" id="description" name="description" rows="3" required ><?=$category['description']?></textarea>
                         </div>
                         <div class="col-12">
                             <br>
                             <div class="d-grid">
-                                <a href="/index.php?/act=category-update"><button class="btn btn-primary btn-lg" type="submit">Sửa Ngay</button></a>
+                                <button class="btn btn-primary btn-lg" type="submit">Sửa Ngay</button>
                             </div>
                         </div>
                     </div>
