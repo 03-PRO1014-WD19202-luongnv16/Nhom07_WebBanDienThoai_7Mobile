@@ -139,17 +139,18 @@
   </form>
 
 
-  <hr>
 <form action="<?= BASE_URL ?>?act=/comment" method="POST">
   <div class="container mt-5">
+  <h2 class="comments-heading">Bình luận</h2>
+  <hr>
     <div class="d-flex justify-content-center row">
       <div class="col-md-8">
-        <div class="d-flex flex-column comment-section" style="height: 400px; overflow-y: auto;"> <!-- Added fixed height and overflow -->
+        <div class="d-flex flex-column comment-section" style="height: 400px; overflow-y: auto;">
           <?php foreach ($comments as $comment) : ?>
           <div class="bg-white p-2">
             <div class="d-flex flex-row user-info">
               <div class="d-flex flex-column justify-content-start ml-2">
-                <span class="d-block font-weight-bold name"><?= $comment['username'] ?></span>
+                <span class="d-block font-weight-bold name" style="font-size: 20px; font-weight: bold;"><?= $comment['username'] ?></span>
                 <span class="date text-black-50"><?= $comment['created_at'] ?></span>
               </div>
             </div>
@@ -171,7 +172,7 @@
       </div>
       <?php if (isset($_SESSION['user_id'])): ?>
       <div class="mt-2 text-right">
-        <button type="submit" class="btn btn-primary btn-sm shadow-none">Post comment</button>
+        <button type="submit" class="btn btn-primary btn-sm shadow-none">Gửi bình luận</button>
       </div>
       <?php else: ?>
         <div class="mt-2 text-right">

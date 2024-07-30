@@ -26,7 +26,7 @@ function getOrderDetails($orderId)
         products ON orderdetails.product_id = products.product_id
     WHERE 
         orderdetails.order_id = :orderId";
-
+    
     $stmt = $conn->prepare($sql);
     $stmt->bindParam(':orderId', $orderId, PDO::PARAM_INT);
     $stmt->execute();

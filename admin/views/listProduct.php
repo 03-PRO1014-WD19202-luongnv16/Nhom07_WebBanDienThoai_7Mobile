@@ -206,10 +206,6 @@
                     <th scope="col">số lượng</th>
                     <th scope="col">ngày tạo</th>
                     <th>Hành động</th>
-
-
-
-
                 </tr>
             </thead>
             <tbody>
