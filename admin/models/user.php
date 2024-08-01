@@ -75,6 +75,19 @@ function getAllUser()
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
-
+function saveUser($name, $email, $first_name,$last_name,$phone,$address,$password, $role) {
+    global $conn; // Sử dụng kết nối từ connect.php
+    $sql = "INSERT INTO users (username, email, first_name,last_name,phone,address,password,role) VALUES (:username,:email,:first_name,:last_name,:phone,:address,:password,:role)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':username', $name);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':first_name', $first_name);
+    $stmt->bindParam(':last_name', $last_name);
+    $stmt->bindParam(':phone', $phone);
+    $stmt->bindParam(':address', $address);
+    $stmt->bindParam(':password', $password);
+    $stmt->bindParam(':role', $role);
+    return $stmt->execute();
+}
 
 

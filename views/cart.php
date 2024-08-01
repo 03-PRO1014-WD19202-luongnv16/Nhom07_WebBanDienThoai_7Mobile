@@ -68,7 +68,7 @@
                       </div>
                     </td>
                     <td class="text-right font-weight-semibold align-middle p-4"><?= $item['price'] ?> </td>
-                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="<?= $item['quantity']?>"></td>
+                    <td class="align-middle p-4"><input type="text" class="form-control text-center" value="<?= $item['quantity']?>" disabled></td>
                     <td class="text-right font-weight-semibold align-middle p-4"><?= $itemTotal ?> </td>
                     <td class="text-center align-middle px-0"><a href="<?=BASE_URL?>?act=/removeProductFromCart&product_id=<?=$item['product_id']?>" class="shop-tooltip close float-none text-danger" title="" data-original-title="Remove">×</a></td>
                   </tr>
