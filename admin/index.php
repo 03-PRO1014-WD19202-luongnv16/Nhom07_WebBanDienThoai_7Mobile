@@ -46,6 +46,9 @@ match ($act) {
     // comment
     'comment' => listComment(),
 
+    'user-add'=>userAdd(),
+    'user-create'=>userCreateForm(),
+
 
 };
 

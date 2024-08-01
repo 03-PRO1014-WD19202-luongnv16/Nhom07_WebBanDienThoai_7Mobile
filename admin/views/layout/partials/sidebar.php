@@ -35,7 +35,7 @@
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
                 <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=users">List</a>
-                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=user-create">Add new</a>
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=user-add">Add new</a>
             </div>
         </div>
     </li>
