@@ -44,3 +44,13 @@ function getCategoryById($category_id) {
 //     $stmt->bindParam(':description', $description, PDO::PARAM_STR);
 //     return $stmt->execute();
 // }
+
+function updateCategory($id, $name, $description) {
+    global $conn;
+    $sql = "UPDATE categories SET name = :name, description = :description WHERE category_id = :id";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':id', $id, PDO::PARAM_INT);
+    $stmt->bindParam(':name', $name, PDO::PARAM_STR);
+    $stmt->bindParam(':description', $description, PDO::PARAM_STR);
+    return $stmt->execute();
+}

@@ -59,4 +59,41 @@ function removeProduct($product_id){
     echo "<script>alert('$message'); window.location.href='index.php?act=products';</script>";
 }
 
+function productEdit($product_id) {
+    $view = 'editProduct';
+    $product = getProductById($product_id);
+    $categories = getAllCategory();
+    require_once PATH_VIEW_ADMIN . 'layout/master.php';
+    require_once './views/editProduct.php';
+}
+function updateProductForm($product_id) {
+    $view = 'editProduct';
+    $categories = getAllCategory();
+
+    $category_id = $_POST['category_id'];
+    $description = $_POST['description'];
+    $price= $_POST['price'];
+    $stock=$_POST['stock'];
+    $ram=$_POST['ram'];
+    $rom=$_POST['rom'];
+    $color = $_POST['color'];
+
+    $image = $_FILES['image']['name'];
+    $target_dir = "../upload/image/";
+    $target_file = $target_dir . basename($image);
+    move_uploaded_file($_FILES['image']['tmp_name'], $target_file);
+
+
+    $priceSale= $_POST['priceSale'];
+    $name = $_POST['name'];
+
+    if (updateProduct($product_id, $name, $description, $category_id, $priceSale, $stock, $price, $image, $ram, $rom, $color)) {
+        $success = "Update mới thành công";
+    } else {
+        $error = "Có lỗi xảy ra. Vui lòng thử lại.";
+    }
+    $product = getProductById($product_id);
+    require_once PATH_VIEW_ADMIN . 'layout/master.php';
+    require_once './views/editProduct.php';
+}
 

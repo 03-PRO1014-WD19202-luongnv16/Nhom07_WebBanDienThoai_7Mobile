@@ -28,7 +28,7 @@ match ($act) {
     'categories' => categoryIndex(),
     'products' => productIndex(),
     'category-add' => categoryAdd(),
-    // 'category-update'=> updateCategoryForm(),
+    'category-update'=> updateCategoryForm($_GET['id']),
     'category-create' => handleCategoryForm(),
     'category-delete'=> removeCategory($_GET['id']),
     'editCategory'=> categoryEdit($_GET['id']),
@@ -40,9 +40,13 @@ match ($act) {
     // Don hang
     'order' => orderIndex(),
     'order-detail' => orderDetail($_GET['id']),
+    'product-update'=> updateProductForm($_GET['product_id']),
+    'editProduct'=> productEdit($_GET['id']),
+    'updateStatus'=> updateOrderForm($_GET['id']),
     // comment
     'comment' => listComment(),
-    
+
+
 };
 
 require_once '../commons/disconnect.php';

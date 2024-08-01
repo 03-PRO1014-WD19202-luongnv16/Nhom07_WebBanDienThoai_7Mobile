@@ -97,8 +97,10 @@
         <?php foreach ($postTopSales as $postTopSale): ?>
             <div class="mySlides fade">
                 <!-- <div class="numbertext">1 / 3</div> -->
+                 <div class="backgrount" style="background-image: url('/./upload/image/bannner.jpeg'); width:500px; height=250px; backgrount-repeat:no-repeat;" >
                 <img src="../upload/image/<?= htmlspecialchars($postTopSale['image']) ?>"
                     alt="<?= htmlspecialchars($postTopSale['name']) ?>" style="width:40%">
+                    </div>
                 <p class="price"><?= htmlspecialchars($postTopSale['name']) ?></p>
                 <p class="price">
                     Giá:
