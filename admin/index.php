@@ -43,7 +43,9 @@ match ($act) {
     'product-update'=> updateProductForm($_GET['product_id']),
     'editProduct'=> productEdit($_GET['id']),
     'updateStatus'=> updateOrderForm($_GET['id']),
-    
+    // comment
+    'comment' => listComment(),
+
 
 };
 
