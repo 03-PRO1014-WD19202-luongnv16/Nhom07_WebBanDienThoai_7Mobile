@@ -72,7 +72,7 @@
                     <?php if (isset($orders['status']) && $orders['status'] == 'Đã hủy'): ?>
                         <select name="status" class="form-select  col-4" aria-label="Default select example">
                             <option value="<?= $orders['status'] ?>" selected><?= $orders['status'] ?></option>
-                            <option value="Đã hủy">Đã hủy</option>
+                            <!-- <option value="Đã hủy">Đã hủy</option> -->
                         </select>
                     <?php endif ?>
                     <?php if (isset($orders['status']) && $orders['status'] == 'Chờ giao hàng'): ?>
