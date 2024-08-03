@@ -33,7 +33,7 @@ match ($act) {
     'category-delete'=> removeCategory($_GET['id']),
     'editCategory'=> categoryEdit($_GET['id']),
     'users'=> userIndex(),
-    'userDetail'=> showUser($_GET['id']),
+    // 'userDetail'=> showUser($_GET['id']),
     'product-add'=> productAdd(),
     'product-create'=> handleProductForm(),
     'product-delete' => removeProduct($_GET['id']),
@@ -43,6 +43,7 @@ match ($act) {
     'product-update'=> updateProductForm($_GET['product_id']),
     'editProduct'=> productEdit($_GET['id']),
     'updateStatus'=> updateOrderForm($_GET['id']),
+    'orderByStatus'=> showOrdersByStatus($_GET['status']),
     // comment
     'comment' => listComment(),
 

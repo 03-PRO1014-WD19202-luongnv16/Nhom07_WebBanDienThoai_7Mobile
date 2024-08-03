@@ -79,7 +79,7 @@
 
           <p>
             <!-- <input class="inputproduct"  type="text"  value="<?= $product['description'] ?>" disabled style="width:555px;"> -->
-            <textarea class="inputproduct" name="description" id="description" disabled style="width:555px;"><?= $product['description'] ?></textarea>
+            <textarea class="inputproduct" name="description" id="description" disabled style="width:555px; height: 150px;"><?= $product['description'] ?></textarea>
 
           </p>
 

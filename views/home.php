@@ -97,11 +97,11 @@
         <?php foreach ($postTopSales as $postTopSale): ?>
             <div class="mySlides fade">
                 <!-- <div class="numbertext">1 / 3</div> -->
-                 <div class="backgrount" style="background-image: url('/./upload/image/bannner.jpeg'); width:500px; height=250px; backgrount-repeat:no-repeat;" >
+                 <!-- <div class="backgrount" style="background-image: url('/./upload/image/bannner.jpeg'); width:500px; height=250px; backgrount-repeat:no-repeat;" > -->
                 <img src="../upload/image/<?= htmlspecialchars($postTopSale['image']) ?>"
-                    alt="<?= htmlspecialchars($postTopSale['name']) ?>" style="width:40%">
-                    </div>
-                <p class="price"><?= htmlspecialchars($postTopSale['name']) ?></p>
+                    alt="<?= htmlspecialchars($postTopSale['name']) ?>" style="width:100%">
+                    <!-- </div> -->
+                <p class="h4"><?= htmlspecialchars($postTopSale['name']) ?></p>
                 <p class="price">
                     Giá:
                     <?php if (!empty($postTopSale['priceSale'])): ?>
@@ -146,7 +146,7 @@
         }
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
-        setTimeout(showSlides, 2000); // Change image every 2 seconds
+        setTimeout(showSlides, 3000); // Change image every 2 seconds
     }
 </script>
 <!-- endslide -->
@@ -195,7 +195,7 @@
                 <div class="card">
                     <div class="row" style="justify-content: center;">
                     <img src="../upload/image/<?= htmlspecialchars($postTopView['image']) ?>"
-                        alt="<?= htmlspecialchars($postTopView['name']) ?>" style="height: 200px; width: 200px;">
+                        alt="<?= htmlspecialchars($postTopView['name']) ?>" style="width: 400px; height: 200px; object-fit: cover;">
                         </div>
                         <div class="row" style="height:95px; ">
                     <h1><?= htmlspecialchars($postTopView['name']) ?></h1>

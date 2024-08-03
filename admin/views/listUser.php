@@ -206,7 +206,7 @@
                             <th>email</th>
                             <th>role</th>
                             <th>
-                                action
+                                <!-- action -->
                             </th>
                         </tr>
                     </thead>
@@ -221,7 +221,7 @@
                             <td>
                             <!-- <a href="<?= BASE_URL_ADMIN ?>?act=user-delete&id=<?= $user['user_id'] ?>"><button class="btn btn-danger">xóa</button></a>
                             <a href="<?= BASE_URL_ADMIN ?>?act=editUser&id=<?= $user['user_id'] ?>"> <button class="btn btn-warning"> Sửa</button></a> -->
-                            <a href="<?= BASE_URL_ADMIN ?>?act=detailUser&id=<?= $user['user_id'] ?>"> <button class="btn btn-info"> detail</button></a>
+                            <!-- <a href="<?= BASE_URL_ADMIN ?>?act=detailUser&id=<?= $user['user_id'] ?>"> <button class="btn btn-info"> detail</button></a> -->
                             </td>
                         </tr>
 

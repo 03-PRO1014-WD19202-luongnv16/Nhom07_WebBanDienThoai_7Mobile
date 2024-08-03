@@ -39,5 +39,10 @@ function updateOrderForm($id) {
     require_once './views/listOrder.php';
 }
 
-
+function showOrdersByStatus($status) {
+    $view = 'listOrderByStatus';
+    $orders = getOrdersByStatus($status);
+    require_once PATH_VIEW_ADMIN . 'layout/master.php';
+    require_once './views/listOrderByStatus.php';
+}
 

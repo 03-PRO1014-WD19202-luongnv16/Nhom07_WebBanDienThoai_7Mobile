@@ -2,7 +2,7 @@
 
 function createOrder($userId, $total, $fullname, $email, $phone, $address ) {
     global $conn;
-    $stmt = $conn->prepare("INSERT INTO orders (user_id, total, fullname, email, phone, address) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO orders (user_id, total, full_name, email, phone, address) VALUES (?, ?, ?, ?, ?, ?)");
     $stmt->execute([$userId, $total, $fullname, $email, $phone, $address]);
     return $conn->lastInsertId();
 }
