@@ -8,11 +8,6 @@ function userIndex() {
 }
 
 
-function showUser($id) {
-    $view = 'detailUser';
-    require_once PATH_VIEW_ADMIN . 'layout/master.php';
-    require_once './views/detailUser.php';
-}
 
 function userAdd(){
     $view = 'createUser';

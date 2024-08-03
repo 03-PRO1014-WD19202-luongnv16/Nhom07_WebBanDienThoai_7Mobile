@@ -43,6 +43,8 @@
                         </div>
                         <div>
                             <label for="image" class="form-label"> Image <span class="text-danger">*</span></label>
+                            <img src="../upload/image/<?= htmlspecialchars ($product['image'])?>" alt="" style="width: 400px; height:300px ;">
+                            <hr>
                             <input type="file" class="form-control" id="image" name="image" required value="<?= htmlspecialchars($product['image']) ?>">
                         </div>
                         <div class="col-12">
@@ -55,7 +57,7 @@
                         </div>
                         <div class="col-12">
                             <label for="priceSale" class="form-label">Price Sale <span class="text-danger">*</span></label>
-                            <input type="text" class="form-control" id="priceSale" name="priceSale"  required value="<?= htmlspecialchars($product['priceSale']) ?>" >
+                            <input type="text" class="form-control" id="priceSale" name="priceSale"  value="<?= htmlspecialchars($product['priceSale']) ?>" >
                         </div>
                         <!-- <div class="col-12">
                             <label for="created_at" class="form-label">Create At<span class="text-danger">*</span></label>

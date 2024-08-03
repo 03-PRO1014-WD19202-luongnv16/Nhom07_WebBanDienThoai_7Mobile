@@ -13,8 +13,8 @@ function getAllOrder()
 function getOrderDetails($orderId)
 {
     global $conn; // Use the connection from connect.php
-    $sql = 
-   " SELECT 
+    $sql =
+        " SELECT 
     orderdetails.order_detail_id,
     orderdetails.order_id,
     orderdetails.product_id,
@@ -36,7 +36,8 @@ WHERE
 }
 
 
-function getOrderById($id) {
+function getOrderById($id)
+{
     global $conn;
     $sql = "SELECT * FROM orders WHERE order_id = $id";
     $stmt = $conn->prepare($sql);
@@ -44,7 +45,8 @@ function getOrderById($id) {
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-function updateOrder($id, $status) {
+function updateOrder($id, $status)
+{
     global $conn;
     $sql = "UPDATE orders SET status = :status WHERE order_id = :id";
     $stmt = $conn->prepare($sql);
@@ -53,3 +55,26 @@ function updateOrder($id, $status) {
     // $stmt->bindParam(':description', $description, PDO::PARAM_STR);
     return $stmt->execute();
 }
+
+function getOrdersByStatus($status)
+{
+    global $conn;
+    $sql = "SELECT * FROM orders WHERE status = :status";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':status', $status);
+    $stmt->execute();
+
+    return $stmt->fetchAll();
+}
+
+function countOrdersByStatus($status)
+{
+    global $conn;
+    $sql = "SELECT status, COUNT(*) AS order_count FROM orders WHERE status = :status GROUP BY status;";
+$stmt = $conn->prepare($sql);
+$stmt->bindParam(':status', $status);
+$stmt->execute();
+
+return $stmt->fetch();
+}
+

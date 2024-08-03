@@ -296,18 +296,6 @@
                                         <h5 class="font-size-14 mb-3">Payment method :</h5>
                                         <div class="row">
 
-                                            <div class="col-lg-3 col-sm-6">
-                                                <div>
-                                                    <label class="card-radio-label">
-                                                        <input type="radio" name="pay-method1" id="pay-methodoption2"
-                                                            class="card-radio-input" value="Bank">
-                                                        <span class="card-radio py-3 text-center text-truncate">
-                                                            <i class="bx bxl-paypal d-block h2 mb-3"></i>
-                                                            Bank
-                                                        </span>
-                                                    </label>
-                                                </div>
-                                            </div>
 
                                             <div class="col-lg-3 col-sm-6">
                                                 <div>
