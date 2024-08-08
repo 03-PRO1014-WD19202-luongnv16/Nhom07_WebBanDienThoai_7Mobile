@@ -37,9 +37,9 @@
             <div class="col-md-5">
                 <div class="message-box _success">
                      <i class="fa fa-check-circle" aria-hidden="true"></i>
-                    <h2> Your payment was successful </h2>
-                   <p> Thank you for your payment. we will <br>
-be in contact with more details shortly </p>      
+                    <h2> Đơn hàng của bạn đã được tạo </h2>
+                   <p> Cảm ơn đã tin tưởng mua hàng tại 7Mobile <br>
+hãy chú ý liên hệ đến từ 7Mobile </p>      
             </div> 
         </div> 
     </div> 
