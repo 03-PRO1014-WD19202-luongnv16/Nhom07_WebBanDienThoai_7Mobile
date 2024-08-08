@@ -45,6 +45,7 @@ match ($act) {
     'updateStatus'=> updateOrderForm($_GET['id']),
     // comment
     'comment' => listComment(),
+    'contact' => contactIndex(),
 
 
 };
