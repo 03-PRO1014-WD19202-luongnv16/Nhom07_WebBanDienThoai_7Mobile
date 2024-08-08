@@ -88,6 +88,18 @@
                             <option value="Giao hàng thất bại">Giao hàng thất bại</option>
                         </select>
                     <?php endif ?>
+                    <?php if (isset($orders['status']) && $orders['status'] == 'Giao hàng thành công'): ?>
+                        <select name="status" class="form-select  col-4" aria-label="Default select example">
+                            <option value="<?= $orders['status'] ?>" selected><?= $orders['status'] ?></option>
+                         
+                        </select>
+                    <?php endif ?>
+                    <?php if (isset($orders['status']) && $orders['status'] == 'Giao hàng thất bại'): ?>
+                        <select name="status" class="form-select  col-4" aria-label="Default select example">
+                            <option value="<?= $orders['status'] ?>" selected><?= $orders['status'] ?></option>
+                           
+                        </select>
+                    <?php endif ?>
 
 
 
