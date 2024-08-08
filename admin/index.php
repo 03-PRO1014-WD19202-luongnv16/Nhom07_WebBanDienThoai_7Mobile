@@ -46,6 +46,7 @@ match ($act) {
     'orderByStatus'=> showOrdersByStatus($_GET['status']),
     // comment
     'comment' => listComment(),
+    'contact' => contactIndex(),
 
     'user-add'=>userAdd(),
     'user-create'=>userCreateForm(),
