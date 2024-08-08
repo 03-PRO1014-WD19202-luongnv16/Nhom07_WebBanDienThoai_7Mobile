@@ -110,6 +110,18 @@
             </div>
         </div>
     </li>
+
+    <li class="nav-item">
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapse9" aria-expanded="true" aria-controls="collapse9">
+            <i class="fab fa-apple"></i>
+            <span>QUẢN LÝ LIÊN HỆ</span>
+        </a>
+        <div id="collapse9" class="collapse" aria-labelledby="heading9" data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="<?= BASE_URL_ADMIN ?>?act=contact">List</a>
+            </div>
+        </div>
+    </li>
     <!-- Nav Item - Utilities Collapse Menu -->
 
 
