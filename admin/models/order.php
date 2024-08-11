@@ -3,7 +3,7 @@
 function getAllOrder()
 {
     global $conn; // Sử dụng kết nối từ connect.php
-    $sql = "SELECT * FROM  orders";
+    $sql = "SELECT * FROM orders ORDER BY order_id DESC";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
@@ -67,6 +67,8 @@ function getOrdersByStatus($status)
     return $stmt->fetchAll();
 }
 
+
+//ham dem so nhung khogn chay dc
 function countOrdersByStatus($status)
 {
     global $conn;
